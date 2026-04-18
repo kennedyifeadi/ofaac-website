@@ -18,6 +18,7 @@
   --color-blue-light: var(--blue-light);
   --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-lora), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-script: var(--font-great-vibes), cursive;
 }
 
 /* @media (prefers-color-scheme: dark) {

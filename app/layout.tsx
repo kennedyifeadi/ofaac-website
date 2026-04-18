@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat, Lora } from "next/font/google";
+import { Montserrat, Lora, Great_Vibes } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
@@ -10,6 +10,12 @@ const montserrat = Montserrat({
 
 const lora = Lora({
   variable: "--font-lora",
+  subsets: ["latin"],
+});
+
+const greatVibes = Great_Vibes({
+  weight: "400",
+  variable: "--font-great-vibes",
   subsets: ["latin"],
 });
 
@@ -26,7 +32,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${lora.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${lora.variable} ${greatVibes.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />
