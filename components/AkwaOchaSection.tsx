@@ -1,8 +1,9 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowDown } from "lucide-react";
+import { ArrowDown} from "lucide-react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function AkwaOchaSection() {
   const text = "At the heart of Anioma culture lies the Akwa-Ocha, a traditional hand-woven white cloth that embodies the very essence of our people. A profound symbol of pride, purity, and unity for the Anioma nation.";
@@ -89,6 +90,7 @@ export default function AkwaOchaSection() {
         </motion.div>
 
         {/* BOTTOM RIGHT CUTOUT (Explore button - visible from the start) */}
+        <Link href="/about">
         <div 
           className="absolute bottom-0 right-0 bg-white md:pt-6 pt-2 md:pl-4 pl-2 md:pb-4 pb-2 md:pr-4 pr-2 rounded-tl-2xl sm:rounded-tl-[2.5rem] flex items-center gap-2 cursor-pointer hover:bg-gray-50 transition-colors z-20 group"
         >
@@ -105,10 +107,11 @@ export default function AkwaOchaSection() {
           <span className="font-sans font-medium text-foreground uppercase tracking-[0.2em] text-sm group-hover:text-gold-dark transition-colors">
             Explore
           </span>
-          <div className=" text-black -rotate-45 rounded-full p-2 group-hover:bg-gold-dark transition-colors hover:scale-110 transform">
+          <div className=" text-black -rotate-45 rounded-full p-2 group-hover:bg-gold-dark group-hover:text-white transition-colors hover:scale-110 transform">
             <ArrowDown size={20} strokeWidth={2.5} />
           </div>
         </div>
+        </Link>
 
       </motion.div>
     </section>
