@@ -3,6 +3,7 @@ import IntroductionSection from "@/components/IntroductionSection";
 import AboutSection from "@/components/AboutSection";
 import CountdownSection from "@/components/CountdownSection";
 import EventsSection from "@/components/EventsSection";
+import CTASection from "@/components/CTASection";
 
 export default function Home() {
   return (
@@ -21,6 +22,9 @@ export default function Home() {
 
       {/* Interactive Tabs Event Module */}
       <EventsSection />
+
+      {/* Final Call to Action Block */}
+      <CTASection />
     </div>
   );
 }

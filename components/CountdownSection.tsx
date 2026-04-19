@@ -95,7 +95,7 @@ export default function CountdownSection() {
 
   return (
     <section className="w-full bg-background py-10 px-4 sm:px-6 md:px-12">
-      <div className="w-full mx-auto relative overflow-hidden rounded-2xl md:rounded-[3rem] shadow-2xl min-h-[600px] flex items-center">
+      <div className="w-full mx-auto relative overflow-hidden rounded-2xl md:rounded-[3rem] min-h-[600px] flex items-center">
         {/* Background Image Overlay */}
         <div className="absolute inset-0 z-0">
           <Image
