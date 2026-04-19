@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import Image from "next/image";
+import logo from "@/public/OFFAC_Logo.jpeg";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
@@ -42,9 +44,7 @@ export default function Navbar() {
         {/* Extreme Left: Logo */}
         <div className="flex-1 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <span className="font-serif font-bold text-2xl text-gold-dark">
-              OFAAC
-            </span>
+            <Image src={logo} alt="Logo" width={50} height={50} className="rounded-full" />
           </Link>
         </div>
 
