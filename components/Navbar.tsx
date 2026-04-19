@@ -2,13 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import logo from "@/public/OFFAC_Logo.jpeg";
 
 export default function Navbar() {
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     if (latest > 20) {
@@ -74,15 +75,62 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button - simple placeholder for now */}
+        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
-          <button className="text-foreground p-2">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-            </svg>
+          <button 
+            className="text-foreground p-2 focus:outline-none"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+            )}
           </button>
         </div>
       </motion.nav>
+
+      {/* Mobile Dropdown DOM */}
+      <AnimatePresence>
+        {isMobileMenuOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.2 }}
+            className={`absolute top-[110%] left-4 right-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl overflow-hidden border border-zinc-100 flex flex-col md:hidden ${
+               isScrolled ? 'top-[110%]' : 'top-[110%]'
+            }`}
+          >
+            <ul className="flex flex-col p-4 text-sm font-medium">
+              {navLinks.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="block px-4 py-3 hover:bg-zinc-50 rounded-xl transition-colors hover:text-gold"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+              <li className="mt-2 text-center pt-4 border-t border-zinc-100 px-2 pb-2">
+                <Link
+                  href="/sponsor"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block px-4 py-4 bg-gold-dark text-white rounded-2xl font-bold uppercase tracking-widest text-xs shadow-lg shadow-gold-dark/20"
+                >
+                  Support Our Mission
+                </Link>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
