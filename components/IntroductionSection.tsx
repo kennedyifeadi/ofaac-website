@@ -45,7 +45,7 @@ export default function IntroductionSection() {
         </div>
 
         {/* RIGHT COLUMN: Layered Map Visual */}
-        <div className="w-full lg:w-[55%] relative min-h-[400px] md:min-h-[500px] flex items-center justify-center">
+        <div className="w-full lg:w-[55%] hidden md:flex relative min-h-[400px] md:min-h-[500px] items-center justify-center">
           <Image 
             src={image}
             alt="Delta State Map"

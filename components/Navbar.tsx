@@ -38,13 +38,16 @@ export default function Navbar() {
         className={`flex items-center overflow-hidden transition-colors duration-300 ${
           isScrolled
             ? "w-[90%] md:w-[80%] max-w-6xl mx-auto rounded-full bg-white/70 backdrop-blur-md shadow-lg border border-white/20 border-b-white/20 px-6 py-3 mt-4"
-            : "w-full max-w-full mx-auto rounded-none bg-white border-b-black px-6 md:px-12 py-4 mt-0"
+            : "w-full max-w-full mx-auto rounded-none bg-white px-6 md:px-12 py-4 mt-0"
         }`}
       >
         {/* Extreme Left: Logo */}
         <div className="flex-1 flex items-center">
           <Link href="/" className="flex items-center gap-2">
             <Image src={logo} alt="Logo" width={50} height={50} className="rounded-full" />
+            <span className="font-serif font-bold text-2xl text-gold">
+              OFAAC
+            </span>
           </Link>
         </div>
 
