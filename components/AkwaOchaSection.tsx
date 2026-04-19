@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ArrowDown} from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import DSC_47 from "@/public/DSC_47.jpg";
 
 export default function AkwaOchaSection() {
   const text = "At the heart of Anioma culture lies the Akwa-Ocha, a traditional hand-woven white cloth that embodies the very essence of our people. A profound symbol of pride, purity, and unity for the Anioma nation.";
@@ -32,7 +33,7 @@ export default function AkwaOchaSection() {
         >
           {/* Background Image (Placeholder) */}
           <Image 
-            src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=2000&auto=format&fit=crop" 
+            src={DSC_47} 
             alt="Akwa-Ocha Fabric"
             fill
             className="object-cover"
