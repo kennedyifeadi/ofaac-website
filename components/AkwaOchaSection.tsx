@@ -36,6 +36,7 @@ export default function AkwaOchaSection() {
             src={DSC_47} 
             alt="Akwa-Ocha Fabric"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           

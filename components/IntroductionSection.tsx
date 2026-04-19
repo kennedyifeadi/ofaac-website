@@ -49,7 +49,9 @@ export default function IntroductionSection() {
           <Image 
             src={image}
             alt="Delta State Map"
-            className="object-cover relative z-10"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
             priority
           />
         </div>

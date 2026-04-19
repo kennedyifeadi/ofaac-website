@@ -102,6 +102,7 @@ export default function CountdownSection() {
             src={DSC_68}
             alt="Festival Background Placeholder"
             fill
+            sizes="100vw"
             className="object-cover"
           />
           {/* Dark gradient mapping to make text pop precisely */}

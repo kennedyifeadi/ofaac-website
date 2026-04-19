@@ -26,6 +26,7 @@ export default function AboutSection() {
                 src={LeftImage} 
                 alt="Culture Short Image Placeholder" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                 className="object-cover hover:scale-105 transition-transform duration-1000" 
               />
             </div>
@@ -69,6 +70,7 @@ export default function AboutSection() {
                 src={RightImage} 
                 alt="Culture Tall Image Placeholder" 
                 fill 
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                 className="object-cover hover:scale-105 transition-transform duration-1000 object-[90%_10%]" 
               />
             </div>

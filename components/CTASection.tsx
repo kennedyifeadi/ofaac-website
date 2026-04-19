@@ -17,6 +17,7 @@ export default function CTASection() {
             src={DSC_63} 
             alt="Anioma Culture Background" 
             fill 
+            sizes="100vw"
             className="object-cover"
           />
           {/* Heavy gradient fade from Left (black) to Right (transparent) */}
