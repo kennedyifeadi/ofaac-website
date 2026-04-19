@@ -1,5 +1,7 @@
 import AkwaOchaSection from "@/components/AkwaOchaSection";
 import IntroductionSection from "@/components/IntroductionSection";
+import AboutSection from "@/components/AboutSection";
+import CountdownSection from "@/components/CountdownSection";
 
 export default function Home() {
   return (
@@ -9,6 +11,12 @@ export default function Home() {
       
       {/* Hero / Information Section with Dynamic Map Masking */}
       <IntroductionSection />
+
+      {/* About Us masonry grid section */}
+      <AboutSection />
+
+      {/* Dynamic Automated Countdown Banner */}
+      <CountdownSection />
     </div>
   );
 }

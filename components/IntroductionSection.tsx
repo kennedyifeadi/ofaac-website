@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
+import image from "@/public/ImageOfMap.png"
 
 export default function IntroductionSection() {
   return (
     <section className="relative w-full overflow-hidden bg-background">
 
-      <div className="w-full mx-auto px-6 sm:px-8 md:px-24 py-20 md:py-32 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+      <div className="w-full mx-auto px-6 sm:px-8 md:px-24 py-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
         
         {/* LEFT COLUMN: Typography & Actions */}
         <div className="w-full lg:w-[45%] flex flex-col items-start z-10">
@@ -46,9 +47,8 @@ export default function IntroductionSection() {
         {/* RIGHT COLUMN: Layered Map Visual */}
         <div className="w-full lg:w-[55%] relative min-h-[400px] md:min-h-[500px] flex items-center justify-center">
           <Image 
-            src="/ImageOfMap.png"
+            src={image}
             alt="Delta State Map"
-            fill
             className="object-cover relative z-10"
             priority
           />
