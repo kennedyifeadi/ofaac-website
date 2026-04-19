@@ -2,6 +2,7 @@ import AkwaOchaSection from "@/components/AkwaOchaSection";
 import IntroductionSection from "@/components/IntroductionSection";
 import AboutSection from "@/components/AboutSection";
 import CountdownSection from "@/components/CountdownSection";
+import EventsSection from "@/components/EventsSection";
 
 export default function Home() {
   return (
@@ -17,6 +18,9 @@ export default function Home() {
 
       {/* Dynamic Automated Countdown Banner */}
       <CountdownSection />
+
+      {/* Interactive Tabs Event Module */}
+      <EventsSection />
     </div>
   );
 }
