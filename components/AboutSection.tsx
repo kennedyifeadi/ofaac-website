@@ -76,11 +76,7 @@ export default function AboutSection() {
             </div>
           </motion.div>
 
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          <div 
             className="lg:col-span-7 flex flex-col lg:pt-8 mt-4 lg:mt-0"
           >
             <h3 className="font-serif text-2xl md:text-3xl font-medium text-zinc-900 mb-10 pb-6 border-b border-zinc-300">
@@ -112,7 +108,7 @@ export default function AboutSection() {
               </div>
 
             </div>
-          </motion.div>
+          </div>
 
         </div>
 
