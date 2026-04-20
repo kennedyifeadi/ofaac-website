@@ -84,7 +84,7 @@ export default function AboutHero() {
             }}
             transition={{ 
               duration: 1.8, 
-              delay: 1.5, 
+              delay: 1, 
               ease: [0.76, 0, 0.24, 1] // Custom snappy spring-like bezier
             }}
             className="absolute left-0 right-0 mx-auto overflow-hidden z-20 pointer-events-none"
