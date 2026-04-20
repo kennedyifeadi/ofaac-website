@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import AboutHero from "@/components/AboutHero";
 import AboutContent from "@/components/AboutContent";
+import AboutMissionVision from "@/components/AboutMissionVision";
+import AboutObjectives from "@/components/AboutObjectives";
+import AboutAchievements from "@/components/AboutAchievements";
+import AboutLeadershipTeaser from "@/components/AboutLeadershipTeaser";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
@@ -12,14 +16,19 @@ export default function AboutPage() {
   return (
     <div className="flex flex-col items-center min-h-screen bg-white">
       
-      {/* The highly interactive Arup-inspired Hero Section */}
       <AboutHero />
 
-      {/* The main reading copy for the Genesis history */}
       <AboutContent />
 
-      {/* Mount standard dynamic CTA below it to catch them at the end */}
-      <CTASection />
+      <AboutMissionVision />
+
+      <AboutObjectives />
+
+      <AboutAchievements />
+
+      <AboutLeadershipTeaser />
+
+      <CTASection/>
       
     </div>
   );
