@@ -71,7 +71,7 @@ export default function AboutObjectives() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative w-full aspect-[4/5] sm:min-h-[450px] lg:h-[500px] rounded-[1.5rem] overflow-hidden group shadow-lg"
+              className="relative w-full aspect-4/5 sm:min-h-[450px] lg:h-[500px] rounded-3xl overflow-hidden group shadow-lg"
             >
               <Image 
                 src={obj.image} 
@@ -82,7 +82,7 @@ export default function AboutObjectives() {
               />
               
               {/* Grandient Overlay to make text legible */}
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent z-10" />
+              <div className="absolute inset-0 bg-linear-to-t from-zinc-950 via-zinc-950/40 to-transparent z-10" />
               
               <div className="absolute bottom-0 left-0 w-full p-6 sm:p-8 z-20 flex flex-col justify-end text-white">
                 <h3 className="font-sans text-2xl font-bold mb-3 tracking-tight">
