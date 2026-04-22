@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import logo from "@/public/OFFAC_Logo.jpeg";
 
 export default function Navbar() {
+  const pathname = usePathname();
   const { scrollY } = useScroll();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -59,7 +61,9 @@ export default function Navbar() {
               <li key={link.name}>
                 <Link
                   href={link.href}
-                  className="hover:text-gold transition-colors duration-200"
+                  className={`hover:text-gold transition-colors duration-200 ${
+                    pathname === link.href ? "text-gold font-bold" : ""
+                  }`}
                 >
                   {link.name}
                 </Link>
@@ -112,7 +116,9 @@ export default function Navbar() {
                   <Link
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="block px-4 py-3 hover:bg-zinc-50 rounded-xl transition-colors hover:text-gold"
+                    className={`block px-4 py-3 rounded-xl transition-colors hover:bg-zinc-50 hover:text-gold ${
+                      pathname === link.href ? "text-gold font-bold bg-zinc-50/50" : "text-zinc-600"
+                    }`}
                   >
                     {link.name}
                   </Link>
