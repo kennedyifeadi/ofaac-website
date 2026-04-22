@@ -88,7 +88,7 @@ export default function EventsArchive() {
                 <li key={fest.year}>
                   <Link 
                     href={fest.link}
-                    className="group bg-[#FAF9F6] border border-zinc-100 hover:border-gold/40 p-6 rounded-2xl flex items-center justify-between transition-all duration-300 hover:shadow-md"
+                    className="group bg-[#FAF9F6] border border-zinc-100 hover:border-gold/40 p-6 rounded-2xl flex items-center justify-between transition-all duration-300"
                   >
                     <div>
                       <span className="font-sans text-xs font-bold text-gold uppercase tracking-widest block mb-1">
@@ -132,7 +132,7 @@ export default function EventsArchive() {
               {lectures.map((lec) => (
                 <li 
                   key={lec.year}
-                  className="bg-white border border-zinc-200 p-6 md:p-8 rounded-2xl flex flex-col shadow-sm"
+                  className="bg-white border border-zinc-200 p-6 md:p-8 rounded-2xl flex flex-col"
                 >
                   <span className="font-sans text-xs font-bold text-gold bg-gold/10 w-max px-3 py-1 rounded-full uppercase tracking-widest mb-4">
                     {lec.year} Lecture
