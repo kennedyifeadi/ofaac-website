@@ -55,8 +55,9 @@ export default function SponsorshipForm({ tier, isOpen, onClose }: SponsorshipFo
       setContactEmail('');
       setContactPhone('');
       setMessage('');
-    } catch (err: any) {
-      setError(err.message || 'An unexpected error occurred. Please try again.');
+    } catch (err: unknown) {
+      const message = err instanceof Error ? err.message : 'An unexpected error occurred. Please try again.';
+      setError(message);
     } finally {
       setLoading(false);
     }
