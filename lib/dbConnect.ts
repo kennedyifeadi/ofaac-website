@@ -6,15 +6,21 @@ if (!MONGODB_URI) {
   console.warn('Please define the MONGODB_URI environment variable inside .env.local');
 }
 
-/**
- * Global is used here to maintain a cached connection across hot reloads
- * in development. This prevents connections growing exponentially
- * during API Route usage.
- */
-let cached = (global as any).mongoose;
+// Define a typed interface for our mongoose cache
+interface MongooseCache {
+  conn: typeof mongoose | null;
+  promise: Promise<typeof mongoose> | null;
+}
 
-if (!cached) {
-  cached = (global as any).mongoose = { conn: null, promise: null };
+// Extend the NodeJS global type so TypeScript knows about our cached connection
+declare global {
+  var mongooseCache: MongooseCache | undefined;
+}
+
+const cached: MongooseCache = globalThis.mongooseCache ?? { conn: null, promise: null };
+
+if (!globalThis.mongooseCache) {
+  globalThis.mongooseCache = cached;
 }
 
 async function dbConnect() {
