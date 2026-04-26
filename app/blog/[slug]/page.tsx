@@ -3,7 +3,6 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import CTASection from "@/components/CTASection";
 import { getBlogPost, blogPosts } from "@/lib/blog-data";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
@@ -151,7 +150,6 @@ export default async function BlogPostPage({
       )}
 
       <CTASection />
-      <Footer />
     </main>
   );
 }
