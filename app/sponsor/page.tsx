@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import SponsorHero from "@/components/SponsorHero";
 import SponsorWhy from "@/components/SponsorWhy";
 import SponsorTiers from "@/components/SponsorTiers";
@@ -16,14 +15,13 @@ export default function SponsorPage() {
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
-      
+
       <SponsorHero />
       <SponsorWhy />
       <SponsorTiers />
       <SponsorPartners />
       <SponsorCTA />
 
-      <Footer />
     </main>
   );
 }

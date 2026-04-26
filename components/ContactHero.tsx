@@ -38,7 +38,7 @@ export default function ContactHero() {
   };
 
   return (
-    <section className="w-full bg-background pt-32 pb-12 px-6 md:px-12">
+    <section className="w-full bg-background pt-6 pb-12 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
 
         {/* Top Row: Big Title + Descriptor */}
