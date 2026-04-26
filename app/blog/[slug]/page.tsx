@@ -124,8 +124,8 @@ export default async function BlogPostPage({
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {related.map(rel => (
                 <Link key={rel.slug} href={`/blog/${rel.slug}`} className="group block">
-                  <div className="bg-white rounded-[1.5rem] overflow-hidden border border-zinc-100 hover:shadow-md transition-all duration-300 h-full flex flex-col">
-                    <div className="relative w-full aspect-[16/10] overflow-hidden">
+                  <div className="bg-white rounded-3xl overflow-hidden border border-zinc-100 hover:shadow-md transition-all duration-300 h-full flex flex-col">
+                    <div className="relative w-full aspect-16/10 overflow-hidden">
                       <Image
                         src={rel.image}
                         alt={rel.title}
