@@ -66,7 +66,7 @@ export default function ContactHero() {
             transition={{ delay: 0.2, duration: 0.7 }}
             className="font-sans text-zinc-500 text-base md:text-lg max-w-xs md:max-w-sm leading-relaxed md:text-right"
           >
-            Send us a message and we'll get back to you within 24 hours. We'd love to hear from you.
+            Send us a message and we&apos;ll get back to you within 24 hours. We&apos;d love to hear from you.
           </motion.p>
         </div>
 
@@ -81,7 +81,7 @@ export default function ContactHero() {
             className="w-full lg:flex-1"
           >
             {success ? (
-              <div className="flex flex-col items-center justify-center py-24 text-center bg-zinc-50 rounded-[2rem] border border-zinc-100">
+              <div className="flex flex-col items-center justify-center py-24 text-center bg-zinc-50 rounded-4xl border border-zinc-100">
                 <div className="text-5xl mb-4">✉️</div>
                 <h3 className="font-serif text-2xl font-bold text-zinc-900 mb-2">Message Sent!</h3>
                 <p className="text-zinc-500 max-w-sm">Thank you for reaching out. A member of our team will get back to you shortly.</p>
@@ -186,7 +186,7 @@ export default function ContactHero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="w-full lg:w-[340px] xl:w-[400px] shrink-0"
           >
-            <div className="relative w-full aspect-[4/5] rounded-[2rem] overflow-hidden group">
+            <div className="relative w-full aspect-4/5 rounded-4xl overflow-hidden group">
               <Image
                 src={DSC_64}
                 alt="OFAAC Culture"
