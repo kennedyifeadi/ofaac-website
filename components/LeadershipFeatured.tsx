@@ -2,11 +2,13 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle2 } from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 
 interface LeadershipFeaturedProps {
   name: string;
   role: string;
   bio: string;
+  image: StaticImageData;
   bullets?: string[];
   reverse?: boolean;
 }
@@ -15,6 +17,7 @@ export default function LeadershipFeatured({
   name,
   role,
   bio,
+  image,
   bullets,
   reverse = false,
 }: LeadershipFeaturedProps) {
@@ -29,20 +32,18 @@ export default function LeadershipFeatured({
         transition={{ duration: 0.8, type: "spring", stiffness: 50 }}
         className="w-full md:w-1/2 flex justify-center"
       >
-        <div className="relative w-full max-w-md aspect-4/5 rounded-2xl bg-zinc-100 flex flex-col items-center justify-center text-zinc-400 overflow-hidden shadow-xl border border-zinc-200">
+        <div className="relative w-full max-w-md aspect-4/5 rounded-2xl overflow-hidden shadow-xl border border-zinc-200">
           {/* Badge */}
           <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-lg text-xs font-bold text-zinc-800 shadow-sm z-10 border border-zinc-100">
             {role}
           </div>
-          
-          {/* Professional Text Placeholder */}
-          <div className="flex flex-col items-center justify-center gap-3 p-8 text-center">
-             <div className="w-16 h-16 rounded-full bg-zinc-200 flex items-center justify-center mb-2">
-               <span className="text-2xl font-serif text-zinc-500">{name.charAt(0)}</span>
-             </div>
-             <p className="font-sans text-sm font-medium tracking-widest uppercase text-zinc-400">Portrait Placeholder</p>
-             <p className="text-xs text-zinc-400/80">Image will be updated shortly</p>
-          </div>
+          <Image
+            src={image}
+            alt={name}
+            fill
+            className="object-cover object-top"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
       </motion.div>
 
@@ -59,7 +60,7 @@ export default function LeadershipFeatured({
           {bio}
         </p>
 
-        {/* Social Icons (matching reference design) */}
+        {/* Social Icons */}
         <div className="flex items-center gap-4 mb-10">
           <div className="w-10 h-10 rounded-lg bg-zinc-50 border border-zinc-200 flex items-center justify-center text-zinc-600 hover:text-gold-dark hover:border-gold transition-colors cursor-pointer">
              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -75,7 +76,7 @@ export default function LeadershipFeatured({
         {/* Bullets Section */}
         {bullets && bullets.length > 0 && (
           <div className="w-full">
-            <h3 className="text-xl font-bold font-serif text-zinc-900 mb-6">Key Contributions & Legacy</h3>
+            <h3 className="text-xl font-bold font-serif text-zinc-900 mb-6">Key Contributions &amp; Legacy</h3>
             <ul className="flex flex-col gap-4">
               {bullets.map((bullet, idx) => (
                 <li key={idx} className="flex items-start gap-3">

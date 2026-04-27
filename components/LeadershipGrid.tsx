@@ -1,11 +1,13 @@
 "use client";
 
 import { motion, Variants } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 
 interface Member {
   name: string;
   role: string;
   bio: string;
+  image: StaticImageData;
 }
 
 interface LeadershipGridProps {
@@ -15,7 +17,6 @@ interface LeadershipGridProps {
 }
 
 export default function LeadershipGrid({ title, description, members }: LeadershipGridProps) {
-  // Stagger animation for the grid items
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -64,19 +65,18 @@ export default function LeadershipGrid({ title, description, members }: Leadersh
             <motion.div key={idx} variants={itemVariants} className="flex flex-col bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-zinc-100">
               
               {/* Image Area */}
-              <div className="relative w-full aspect-square bg-zinc-100 flex items-center justify-center border-b border-zinc-100">
+              <div className="relative w-full aspect-square overflow-hidden border-b border-zinc-100">
                 {/* Badge */}
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded text-[10px] font-bold uppercase tracking-wider text-zinc-800 shadow-sm z-10">
                   {member.role}
                 </div>
-                
-                {/* Professional Text Placeholder */}
-                <div className="flex flex-col items-center justify-center gap-2 p-4 text-center">
-                   <div className="w-12 h-12 rounded-full bg-zinc-200 flex items-center justify-center mb-1">
-                     <span className="text-xl font-serif text-zinc-500">{member.name.charAt(0)}</span>
-                   </div>
-                   <p className="font-sans text-xs font-medium tracking-widest uppercase text-zinc-400">Placeholder</p>
-                </div>
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                />
               </div>
 
               {/* Content Area */}

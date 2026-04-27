@@ -5,6 +5,28 @@ import LeadershipFeatured from "@/components/LeadershipFeatured";
 import LeadershipGrid from "@/components/LeadershipGrid";
 import CTASection from "@/components/CTASection";
 
+// ── Image imports ────────────────────────────────────────────────
+import imgChikeEdozien    from "@/public/Late Obi Prof Chike Edozien.png";
+import imgBSCElue         from "@/public/Chief B.S.C. Elue.png";
+import imgMarthaDunkwu    from "@/public/Late Dr. Martha Dunkwu.png";
+
+import imgNewtonJibunoh   from "@/public/Dr Newton Jibunoh.png";
+import imgPhilipAsiodu    from "@/public/Chief Philip Asiodu.png";
+import imgFortuneEbie     from "@/public/Late Sir Fortune Ebie.png";
+import imgPatUtomi        from "@/public/Prof. Pat Utomi.png";
+import imgKesterIfeadi    from "@/public/Arc. Kester Ifeadi.png";
+import imgEmekaNmadu      from "@/public/Late Emeka Nmadu.png";
+
+import imgPaddyUgboh      from "@/public/Elder Paddy Ugboh.png";
+import imgMonnOlodu       from "@/public/Barr. Monn Olodu.png";
+import imgAfamUgah        from "@/public/Ogbuenyi Afam Ugah.png";
+import imgEmmaOgwu        from "@/public/Elder Emma Ogwu.png";
+import imgSundayOliseh    from "@/public/Emma Mr Sunday Oliseh.png";
+import imgDonatusItoro    from "@/public/Mr. Donatus Itoro.png";
+import imgJosephEgwu      from "@/public/Dr Joseph Egwu.png";
+import imgAndrewObi       from "@/public/Prince Andrew Obi.png";
+// ────────────────────────────────────────────────────────────────
+
 export const metadata: Metadata = {
   title: "Our Leaders: Guiding the Future of Anioma Culture",
   description: "Meet the visionary leaders of the Organization for the Advancement of Anioma Culture (OFAAC). Discover the dedicated individuals on our Founding Patrons, Board of Trustees, and Board of Directors who champion Anioma heritage.",
@@ -15,16 +37,19 @@ const patrons = [
     name: "Late Obi Prof Chike Edozien",
     role: "Grand Patron",
     bio: "As the revered Asagba of Asaba, his unparalleled wisdom and unwavering support laid the foundational bedrock for OFAAC. His legacy continues to inspire our mission to elevate the Anioma cultural identity on the global stage.",
+    image: imgChikeEdozien,
   },
   {
     name: "Chief B.S.C. Elue",
     role: "Founding Patron",
     bio: "A distinguished leader whose foresight and early guidance were instrumental in shaping OFAAC's strategic direction. His contributions remain a guiding light for our community empowerment initiatives.",
+    image: imgBSCElue,
   },
   {
     name: "Late Dr. Martha Dunkwu",
     role: "Founding Patron",
     bio: "The Omu of Okpanam and Anioma, her fierce advocacy for cultural preservation and women's roles in traditional leadership significantly strengthened OFAAC's cultural mandate and outreach.",
+    image: imgMarthaDunkwu,
   },
 ];
 
@@ -33,31 +58,37 @@ const botMembers = [
     name: "Dr. Newton Jibunoh",
     role: "Chairman",
     bio: "Renowned environmentalist, former Chairman of Costain West Africa, and 'Desert Warrior'. His visionary leadership is central to OFAAC's overarching strategic vision.",
+    image: imgNewtonJibunoh,
   },
   {
     name: "Chief Philip Asiodu",
     role: "Member",
     bio: "A statesman of immense repute, his invaluable contributions and towering standing in the community provide robust oversight and strategic depth to the Board.",
+    image: imgPhilipAsiodu,
   },
   {
     name: "Late Sir Fortune Ebie",
     role: "Member",
     bio: "Former Managing Director of the Federal Housing Authority. His profound intellectual input was particularly vital to the establishment of the Anioma Annual Lecture Series.",
+    image: imgFortuneEbie,
   },
   {
     name: "Prof. Pat Utomi",
     role: "Member",
     bio: "Prominent political economist and thought leader. His intellectual contributions and national influence are invaluable assets in advancing our cultural narratives.",
+    image: imgPatUtomi,
   },
   {
     name: "Arc. Kester Ifeadi",
     role: "National President",
     bio: "With a distinguished architectural background, his dynamic leadership and passion drive the organization's core cultural initiatives and infrastructural vision.",
+    image: imgKesterIfeadi,
   },
   {
     name: "Late Hon Emeka Nmadu",
     role: "Member",
     bio: "A dedicated advocate whose foundational contributions and commitment to the Anioma cause continue to be deeply acknowledged and celebrated by the organization.",
+    image: imgEmekaNmadu,
   },
 ];
 
@@ -66,51 +97,61 @@ const directors = [
     name: "Arc. Kester Ifeadi",
     role: "National President",
     bio: "Leads the executive functions, translates strategic vision into actionable programs, and spearheads the daily execution of our cultural mandate.",
+    image: imgKesterIfeadi,
   },
   {
     name: "Elder Paddy Ugboh",
     role: "Vice President",
     bio: "His extensive administrative experience and steadfast support are crucial to the cohesive functioning of the executive leadership team.",
+    image: imgPaddyUgboh,
   },
   {
     name: "Barr. Monn Olodu",
     role: "National Secretary",
     bio: "Expertly manages organizational communications, legal compliance, and maintains the critical administrative records of OFAAC.",
+    image: imgMonnOlodu,
   },
   {
     name: "Late Hon Emeka Nmadu",
     role: "Media Director",
     bio: "His pivotal role in publicizing OFAAC's activities significantly amplified our voice and brought Anioma culture to a wider audience.",
+    image: imgEmekaNmadu,
   },
   {
     name: "Ogbuenyi Afam Ugah",
     role: "Member",
     bio: "A committed director whose hands-on approach and dedication significantly contribute to the success of our grassroots cultural initiatives.",
+    image: imgAfamUgah,
   },
   {
     name: "Elder Emma Ogwu Emma",
     role: "Finance Director",
     bio: "Meticulously oversees the financial health, resource allocation, and long-term sustainability strategies of the organization.",
+    image: imgEmmaOgwu,
   },
   {
     name: "Mr Sunday Oliseh",
     role: "Director of Zonal Affairs",
     bio: "Skillfully coordinates cultural activities and ensures seamless organizational presence across various designated Anioma zones.",
+    image: imgSundayOliseh,
   },
   {
     name: "Mr. Donatus Itoro",
     role: "Director of Zonal Affairs",
     bio: "Works collaboratively to ensure broad regional engagement, mobilizing communities and extending OFAAC's reach.",
+    image: imgDonatusItoro,
   },
   {
     name: "Dr Joseph Egwu",
     role: "Research Director",
     bio: "Leads comprehensive efforts in cultural research, historical documentation, and academic partnerships to preserve our heritage.",
+    image: imgJosephEgwu,
   },
   {
     name: "Prince Andrew Obi",
     role: "Coordinator",
     bio: "Expertly facilitates various organizational activities, logistics, and special projects, ensuring flawless execution of our events.",
+    image: imgAndrewObi,
   },
 ];
 
@@ -139,7 +180,8 @@ export default function LeadershipPage() {
             name={patron.name}
             role={patron.role}
             bio={patron.bio}
-            reverse={index % 2 !== 0} // Alternate layout for visual interest
+            image={patron.image}
+            reverse={index % 2 !== 0}
           />
         ))}
       </section>
