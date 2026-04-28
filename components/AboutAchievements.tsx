@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 const achievements = [
   {
@@ -80,18 +82,28 @@ export default function AboutAchievements() {
                 {/* Visual Marker */}
                 <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gold-dark border-4 border-zinc-50 z-10" />
 
-                {/* Content Block */}
-                <div className={`w-full md:w-1/2 flex flex-col ${isEven ? 'md:pr-16 lg:pr-24 items-start md:items-end text-left md:text-right' : 'md:pl-16 lg:pl-24 items-start text-left'}`}>
+                {/* Content Block — links to Gallery */}
+                <Link
+                  href="/gallery"
+                  className={`group w-full md:w-1/2 flex flex-col cursor-pointer ${isEven ? 'md:pr-16 lg:pr-24 items-start md:items-end text-left md:text-right' : 'md:pl-16 lg:pl-24 items-start text-left'}`}
+                >
                   <span className="font-script text-3xl font-bold text-gold-dark mb-2">
                     {item.year}
                   </span>
-                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900 mb-4 tracking-tight">
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900 mb-4 tracking-tight flex items-center gap-2 group-hover:text-gold-dark transition-colors duration-300">
                     {item.title}
+                    <ArrowUpRight
+                      size={20}
+                      className="opacity-0 group-hover:opacity-100 -translate-y-1 group-hover:translate-y-0 translate-x-1 group-hover:translate-x-0 transition-all duration-300 text-gold-dark shrink-0"
+                    />
                   </h3>
-                  <p className="font-sans text-base text-zinc-600 leading-relaxed bg-white md:bg-transparent p-6 md:p-0 rounded-2xl md:rounded-none shadow-sm md:shadow-none border border-zinc-100 md:border-none">
+                  <p className="font-sans text-base text-zinc-600 leading-relaxed bg-white md:bg-transparent p-6 md:p-0 rounded-2xl md:rounded-none shadow-sm md:shadow-none border border-zinc-100 md:border-none group-hover:border-gold/20 transition-colors duration-300">
                     {item.description}
                   </p>
-                </div>
+                  <span className="mt-3 font-sans text-xs font-bold tracking-widest uppercase text-gold-dark opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    View Gallery →
+                  </span>
+                </Link>
 
                 {/* Empty Spacer for the other half */}
                 <div className="hidden md:block w-1/2" />
