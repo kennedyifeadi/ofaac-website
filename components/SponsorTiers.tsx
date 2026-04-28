@@ -15,7 +15,6 @@ const tiers = [
     benefits: [
       "Brand Visibility on website & event signage",
       "Public Acknowledgment in event programs",
-      "Complimentary general admission tickets",
       "Social Media Acknowledgment"
     ]
   },
@@ -44,7 +43,6 @@ const tiers = [
     benefits: [
       "Prominent Branding on banners & website",
       "Acknowledgment during ceremonies",
-      "Complimentary VIP passes to select events",
       "Standard Exhibition Space at festivals",
       "Regular Social Media Mentions & tags",
       "Feature inclusion in OFAAC Newsletter"
