@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.19",
-    "cloudinary": "^2.9.0",
+    "cloudinary": "^2.10.0",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.8.0",
     "mongoose": "^9.4.1",
