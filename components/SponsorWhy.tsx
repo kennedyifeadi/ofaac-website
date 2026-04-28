@@ -58,6 +58,29 @@ export default function SponsorWhy() {
           </div>
         </div>
 
+        {/* ── Impact Numbers Bar ─────────────────────────────────── */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.15 }}
+          className="grid grid-cols-2 md:grid-cols-4 gap-px bg-zinc-200 rounded-3xl overflow-hidden mb-16 shadow-sm"
+        >
+          {[
+            { number: "20,000+", label: "Total annual reach — online & on-ground" },
+            { number: "9,000+",  label: "Physical attendees per festival edition" },
+            { number: "15+",     label: "Traditional rulers & royal leaders in attendance" },
+            { number: "Easter Monday", label: "Declared Anioma Day — Nigeria's most vibrant cultural celebration", gold: true },
+          ].map((stat, i) => (
+            <div key={i} className="bg-white flex flex-col items-start justify-center px-6 py-8 gap-2">
+              <span className={`font-serif text-2xl sm:text-3xl font-bold ${stat.gold ? "text-gold-dark" : "text-zinc-900"}`}>
+                {stat.number}
+              </span>
+              <span className="font-sans text-xs text-zinc-500 leading-snug">{stat.label}</span>
+            </div>
+          ))}
+        </motion.div>
+
         {/* New Desktop Layout (3 columns: Cards Left, Image Center, Cards Right) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           

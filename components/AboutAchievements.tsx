@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const achievements = [
   {
     title: "Anioma Cultural Festival",
-    description: "The annual Anioma Cultural Festival, held every Easter Monday, has grown into a flagship event, bringing together thousands from across the nine local government areas of Anioma land. It serves as a powerful platform for showcasing traditional dances, arts, crafts, and cuisine, fostering unity and cultural pride.",
+    description: "The annual Anioma Cultural Festival, held every Easter Monday — now widely declared Anioma Day — has grown into one of Nigeria's most celebrated cultural gatherings. Each edition draws over 9,000 physical attendees and reaches more than 20,000 people online and on-ground, with 15+ traditional rulers and royal leaders in attendance. It is a powerful platform for traditional dances, arts, crafts, and cuisine, fostering deep unity across the nine LGAs of Anioma land.",
     year: "Annual"
   },
   {

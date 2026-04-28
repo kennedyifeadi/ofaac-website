@@ -29,6 +29,26 @@ export default function IntroductionSection() {
             </p>
           </div>
 
+          {/* ── Key Festival Stats Strip ── */}
+          <div className="mt-10 grid grid-cols-2 gap-4 border-t border-zinc-200 pt-8">
+            <div className="flex flex-col">
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">20,000<span className="text-gold-dark">+</span></span>
+              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Total festival reach annually — online &amp; on-ground</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">9,000<span className="text-gold-dark">+</span></span>
+              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Physical attendees at the Anioma Cultural Festival</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">15<span className="text-gold-dark">+</span></span>
+              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Traditional rulers &amp; royal leaders attending each edition</span>
+            </div>
+            <div className="flex flex-col">
+              <span className="font-serif text-sm sm:text-base font-bold text-gold-dark leading-tight mt-1">Easter Monday</span>
+              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Unofficially declared <strong className="text-zinc-700">Anioma Day</strong> — celebrated every year</span>
+            </div>
+          </div>
+
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link href="/about"> 
             <button className="flex items-center gap-2 bg-foreground text-background px-8 py-4 rounded-full font-sans font-bold uppercase tracking-wider text-sm hover:bg-gold-dark transition-all duration-300 transform">
