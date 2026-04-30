@@ -1,21 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 // The path to your local video inside the /public folder
-const AboutUsVid = "/AboutUsVid.mp4";
+const AboutUsVid = "/AboutVid.mp4";
 
 export default function AboutHero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    // Wrap in a micro-task to satisfy the strict linter regarding synchronous cascading renders
-    const timer = setTimeout(() => {
-      setMounted(true);
-    }, 0);
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="relative w-full h-[150vh] bg-white">
@@ -38,6 +28,7 @@ export default function AboutHero() {
             loop 
             muted 
             playsInline 
+            preload="auto"
             className="w-full h-full object-cover"
           />
         </div>
@@ -66,40 +57,39 @@ export default function AboutHero() {
         {/* After 1.5 seconds, it smoothly animates down to 60vh,          */}
         {/* rounding its corners, and reveals the text/masking behind it.  */}
         {/* ============================================================== */}
-        {mounted && (
-          <motion.div
-            initial={{ 
-              width: "100vw", 
-              height: "100vh", 
-              top: "0px", 
-              borderRadius: "0px",
-              scale: 1
-            }}
-            animate={{ 
-              width: "92vw", 
-              height: "60vh", 
-              top: "40vh", // Pushes it down below the text cleanly
-              borderRadius: "2rem",
-              scale: 1 
-            }}
-            transition={{ 
-              duration: 1.8, 
-              delay: 1, 
-              ease: [0.76, 0, 0.24, 1] // Custom snappy spring-like bezier
-            }}
-            className="absolute left-0 right-0 mx-auto overflow-hidden z-20 pointer-events-none"
-          >
-            <video 
-              src={AboutUsVid} 
-              autoPlay 
-              loop 
-              muted 
-              playsInline 
-              className="w-full h-full object-cover scale-[1.05] object-[0%_30%]" 
-              // Scale slightly offsets the edge to make it look cinematic
-            />
-          </motion.div>
-        )}
+        <motion.div
+          initial={{ 
+            width: "100vw", 
+            height: "100vh", 
+            top: "0px", 
+            borderRadius: "0px",
+            scale: 1
+          }}
+          animate={{ 
+            width: "92vw", 
+            height: "60vh", 
+            top: "40vh", // Pushes it down below the text cleanly
+            borderRadius: "2rem",
+            scale: 1 
+          }}
+          transition={{ 
+            duration: 1.8, 
+            delay: 1, 
+            ease: [0.76, 0, 0.24, 1] // Custom snappy spring-like bezier
+          }}
+          className="absolute left-0 right-0 mx-auto overflow-hidden z-20 pointer-events-none bg-zinc-900"
+        >
+          <video 
+            src={AboutUsVid} 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            preload="auto"
+            className="w-full h-full object-cover scale-[1.05] object-[0%_30%]" 
+            // Scale slightly offsets the edge to make it look cinematic
+          />
+        </motion.div>
       </div>
     </div>
   );
