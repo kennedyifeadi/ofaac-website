@@ -47,7 +47,7 @@ export default function Navbar() {
         {/* Extreme Left: Logo */}
         <div className="flex-1 flex items-center">
           <Link href="/" className="flex items-center gap-2">
-            <Image src={logo} alt="Logo" width={50} height={50} className="rounded-full" />
+            <Image src={logo} alt="Logo" width={50} height={50} className="rounded-full" priority />
             <span className="font-serif font-bold text-2xl text-gold">
               OFAAC
             </span>

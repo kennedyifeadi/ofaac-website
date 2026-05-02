@@ -79,13 +79,13 @@ export default function AboutObjectives() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative w-full aspect-4/5 sm:min-h-[450px] lg:h-[500px] rounded-3xl overflow-hidden group shadow-lg"
+              className="relative w-full aspect-[4/5] min-h-[400px] sm:min-h-[450px] lg:h-[500px] rounded-3xl overflow-hidden group shadow-lg"
             >
               <Image
                 src={obj.image}
                 alt={obj.title}
-                // fill
-                // sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
               />
 

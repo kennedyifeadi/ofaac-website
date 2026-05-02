@@ -329,6 +329,33 @@ export default function GalleryMain() {
 
         </AnimatePresence>
 
+        {/* ── External Archive CTA (Google Drive) ──────────────── */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-24 pt-12 border-t border-zinc-200 text-center flex flex-col items-center"
+        >
+          <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center text-gold-dark mb-6">
+            <SearchX size={28} className="hidden" /> {/* Placeholder just for sizing context if needed */}
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          </div>
+          <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900 mb-4">
+            Explore Our Complete Archive
+          </h3>
+          <p className="font-sans text-zinc-500 max-w-2xl mx-auto mb-8 text-base md:text-lg">
+            Access more about our rich culture with our full bank of galleries spanning from 2003 to 2026.
+          </p>
+          <a
+            href="https://drive.google.com/drive/folders/1T_MytPiKdNanNfP6qpfZK89hnKXNzACB?usp=sharing" // <-- PASTE GOOGLE DRIVE LINK HERE
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-zinc-900 hover:bg-gold-dark text-white font-sans font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg"
+          >
+            Access Google Drive Archive
+          </a>
+        </motion.div>
         {/* ── Lightbox ───────────────────────────────────────── */}
         <AnimatePresence>
           {lightboxImage && (
