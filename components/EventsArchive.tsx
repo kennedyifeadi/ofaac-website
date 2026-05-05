@@ -2,7 +2,9 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowUpRight, History, BookOpen } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, History, BookOpen, Building2 } from "lucide-react";
+import { projectsData } from "@/lib/projectsData";
 
 export default function EventsArchive() {
   const festivals = [
@@ -153,6 +155,69 @@ export default function EventsArchive() {
           </motion.div>
 
         </div>
+
+        {/* ── Past Projects Section ──────────────────────────────── */}
+        <div className="w-full mt-24 pt-16">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 rounded-full bg-gold-dark/10 flex items-center justify-center text-gold-dark">
+                  <Building2 size={20} />
+                </div>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900">Past Projects & Initiatives</h3>
+              </div>
+              <p className="font-sans text-sm md:text-base text-zinc-500 max-w-2xl leading-relaxed">
+                A chronicle of our developmental strides, community empowerments, and infrastructure projects aimed at uplifting the Anioma nation.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {projectsData.map((project, idx) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: idx * 0.1 }}
+                className="group flex flex-col h-full bg-white border border-zinc-200 hover:border-gold/30 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              >
+                <div className="relative w-full aspect-video overflow-hidden bg-zinc-100">
+                  <Image 
+                    src={project.image} 
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase text-zinc-800">
+                    {project.status}
+                  </div>
+                </div>
+                
+                <div className="flex flex-col grow p-6">
+                  <span className="font-sans text-xs text-gold-dark font-bold uppercase tracking-widest mb-2">
+                    {project.date}
+                  </span>
+                  <h4 className="font-serif text-lg font-bold text-zinc-900 mb-3 leading-snug group-hover:text-gold-dark transition-colors">
+                    {project.title}
+                  </h4>
+                  <p className="font-sans text-sm text-zinc-500 mb-6 line-clamp-3 leading-relaxed">
+                    {project.summary}
+                  </p>
+                  
+                  <Link 
+                    href={`/projects/${project.slug}`}
+                    className="mt-auto flex items-center gap-2 text-sm font-bold text-zinc-900 group-hover:text-gold-dark transition-colors w-max"
+                  >
+                    View Project <ArrowUpRight size={16} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                  </Link>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+
       </div>
     </section>
   );

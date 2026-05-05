@@ -6,9 +6,9 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Heart, BookOpen, ArrowUpRight } from "lucide-react";
 import DSC_38 from "@/public/DSC_38.jpg";
-import DSC_41 from "@/public/DSC_41.jpg";
-import DSC_47 from "@/public/DSC_47.jpg";
-import DSC_56 from "@/public/DSC_56.jpg";
+import AniomaLecture from "@/public/AniomaLecture.png";
+import ResearchAndPublication from "@/public/Research and Publications.jpg";
+import MicroCreditScheme from "@/public/microcreditscheme.png";
 
 const eventsData = [
   {
@@ -24,7 +24,7 @@ const eventsData = [
     shortTitle: "Anioma Lecture Series",
     title: "Annual Lecture Series",
     text: "Since its inception in 2005, the Anioma Annual Lecture Series has provided a critical platform for intellectual engagement on topics vital to Anioma culture and development. Featuring renowned scholars, these lectures foster dialogue for good governance.",
-    image: DSC_41, 
+    image: AniomaLecture, 
     linkText: "Read Archives"
   },
   {
@@ -32,7 +32,7 @@ const eventsData = [
     shortTitle: "Research & Publication",
     title: "Research & Publication",
     text: "In fulfillment of the yearning desire to create a sense of natural identity among the people, OFAAC engages in deep research and documentation. This structural foundation powers the Anioma Essence Magazine and extensive compilation DVDs.",
-    image: DSC_47, 
+    image: ResearchAndPublication, 
     linkText: "View Publications"
   },
   {
@@ -40,7 +40,7 @@ const eventsData = [
     shortTitle: "Micro Credit Scheme",
     title: "Micro Credit Scheme",
     text: "OFAAC is saddled with the onerous task of helping boost small scale businesses within the Anioma communities. By engaging interested participants in entrepreneurial development, our scheme has successfully empowered over 1000 individuals to date.",
-    image: DSC_56, 
+    image: MicroCreditScheme, 
     linkText: "Learn More"
   }
 ];

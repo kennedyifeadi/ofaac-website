@@ -3,6 +3,7 @@ import IntroductionSection from "@/components/IntroductionSection";
 import AboutSection from "@/components/AboutSection";
 import CountdownSection from "@/components/CountdownSection";
 import EventsSection from "@/components/EventsSection";
+import HomeProjects from "@/components/HomeProjects";
 import CTASection from "@/components/CTASection";
 
 export default function Home() {
@@ -22,6 +23,9 @@ export default function Home() {
 
       {/* Interactive Tabs Event Module */}
       <EventsSection />
+
+      {/* Featured Ongoing Projects (Heritage Project) */}
+      <HomeProjects />
 
       {/* Final Call to Action Block */}
       <CTASection />

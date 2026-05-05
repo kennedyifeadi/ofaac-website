@@ -4,11 +4,11 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 import DSC_38 from "@/public/DSC_38.jpg";
-import DSC_41 from "@/public/DSC_41.jpg";
+import GlobalOutreach from "@/public/GlobalOutreach.jpg";
+import ResearchAndPublication from "@/public/Research and Publications.jpg";
+import YouthEmpowerment from "@/public/YouthEmpowerment.jpg";
+import Craft from "@/public/Craft.jpg";
 import DSC_47 from "@/public/DSC_47.jpg";
-import DSC_56 from "@/public/DSC_56.jpg";
-import DSC_64 from "@/public/DSC_64.jpg";
-import DSC_66 from "@/public/DSC_66.jpg";
 
 const objectives = [
   {
@@ -21,7 +21,7 @@ const objectives = [
     title: "Youth Empowerment",
     description:
       "To instill positive self-esteem and a natural identity among the youth, connecting them with their roots.",
-    image: DSC_41,
+    image: YouthEmpowerment,
   },
   {
     title: "Traditional Attire Advocacy",
@@ -33,19 +33,19 @@ const objectives = [
     title: "Crafts & Economic Development",
     description:
       "To encourage traditional crafts for technological advancement, tourism, and economic stabilization in rural areas.",
-    image: DSC_56,
+    image: Craft,
   },
   {
     title: "Research & Documentation",
     description:
       "To conduct thorough research and meticulous documentation of our cultural heritage, ensuring its legacy for future generations.",
-    image: DSC_64,
+    image: ResearchAndPublication,
   },
   {
     title: "Global Outreach",
     description:
       "To package and promote the unique culture of Anioma for national and international tourism.",
-    image: DSC_66,
+    image: GlobalOutreach,
   },
 ];
 
@@ -79,7 +79,7 @@ export default function AboutObjectives() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative w-full aspect-[4/5] min-h-[400px] sm:min-h-[450px] lg:h-[500px] rounded-3xl overflow-hidden group shadow-lg"
+              className="relative w-full aspect-4/5 min-h-[400px] sm:min-h-[450px] lg:h-[500px] rounded-3xl overflow-hidden group shadow-lg"
             >
               <Image
                 src={obj.image}

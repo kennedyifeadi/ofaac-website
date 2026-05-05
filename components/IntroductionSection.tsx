@@ -45,7 +45,7 @@ export default function IntroductionSection() {
             </div>
             <div className="flex flex-col">
               <span className="font-serif text-sm sm:text-base font-bold text-gold-dark leading-tight mt-1">Easter Monday</span>
-              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Unofficially declared <strong className="text-zinc-700">Anioma Day</strong> — celebrated every year</span>
+              <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Officially declared <strong className="text-zinc-700">Anioma Day</strong> — celebrated every year</span>
             </div>
           </div>
 
