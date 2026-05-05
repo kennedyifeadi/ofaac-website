@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import { Music, Map, Users, Sparkles, Utensils, Award } from "lucide-react";
 
 // Placeholder images; we'll reuse some we already imported across the app!
-import imgDance from "@/public/DSC_63.jpg";
-import imgComp from "@/public/DSC_41.jpg";
-import imgCrafts from "@/public/DSC_47.jpg";
-import imgCuisine from "@/public/DSC_56.jpg";
+import imgDance from "@/public/Dances.jpg";
+import imgComp from "@/public/Competions.jpg";
+import imgCrafts from "@/public/Exhibitions.jpg";
+import imgCuisine from "@/public/Cuisine.jpg";
 import imgLive from "@/public/DSC_64.jpg";
-import imgComm from "@/public/DSC_66.jpg";
+import imgComm from "@/public/CommunityUnity.jpg";
 
 // Reuse Meeus/Jones/Butcher algorithm to automatically track Easter Monday
 const getEaster = (year: number) => {
