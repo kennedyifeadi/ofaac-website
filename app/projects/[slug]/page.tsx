@@ -65,7 +65,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
         </p>
 
         {/* Hero Image */}
-        <div className="relative w-full aspect-video md:aspect-[21/9] rounded-[2rem] overflow-hidden mb-16 shadow-lg bg-zinc-100">
+        <div className="relative w-full aspect-video md:aspect-21/9 rounded-4xl overflow-hidden mb-16 shadow-lg bg-zinc-100">
           <Image 
             src={project.image} 
             alt={project.title}
