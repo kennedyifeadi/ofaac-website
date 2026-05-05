@@ -4,21 +4,21 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Star } from "lucide-react";
 
-import DSC_41 from "@/public/DSC_41.jpg";
-import DSC_47 from "@/public/DSC_47.jpg";
+import DSC_41 from "@/public/Community2.jpg";
+import DSC_38 from "@/public/DSC_38.jpg";
 import DSC_63 from "@/public/DSC_63.jpg";
 import DSC_66 from "@/public/DSC_66.jpg";
 
 export default function GallerySpotlight() {
   const spotlights = [
     {
-      image: DSC_63,
+      image: DSC_41,
       title: "The Royal Procession",
       description: "A breathtaking display of traditional Anioma royalty, adorned in authentic Akwa-Ocha garments.",
       aspect: "aspect-3/4" // Tall
     },
     {
-      image: DSC_47,
+      image: DSC_38,
       title: "Festival Spectacle",
       description: "Thousands gathered to witness the annual dance arts, a testament to our enduring unity.",
       aspect: "aspect-video" // Wide
@@ -30,7 +30,7 @@ export default function GallerySpotlight() {
       aspect: "aspect-square" // Square
     },
     {
-      image: DSC_41,
+      image: DSC_63,
       title: "Traditional Dance",
       description: "Youth performers executing the Maiden Dance with incredible precision and grace.",
       aspect: "aspect-4/3" // Horizontal

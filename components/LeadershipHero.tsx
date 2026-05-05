@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import DSC_41 from "@/public/DSC_41.jpg";
+import DSC_41 from "@/public/Community1.jpg";
 
 export default function LeadershipHero() {
   return (
