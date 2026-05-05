@@ -11,7 +11,7 @@ import imgComp from "@/public/Competions.jpg";
 import imgCrafts from "@/public/Exhibitions.jpg";
 import imgCuisine from "@/public/Cuisine.jpg";
 import imgLive from "@/public/DSC_64.jpg";
-import imgComm from "@/public/CommunityUnity.jpg";
+import imgComm from "@/public/DSC_66.jpg";
 
 // Reuse Meeus/Jones/Butcher algorithm to automatically track Easter Monday
 const getEaster = (year: number) => {

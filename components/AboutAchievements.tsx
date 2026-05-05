@@ -39,7 +39,7 @@ const achievements = [
 
 export default function AboutAchievements() {
   return (
-    <section className="w-full bg-white py-10 px-6 sm:px-8 md:px-16">
+    <section id="journey-of-impact" className="w-full bg-white py-10 px-6 sm:px-8 md:px-16">
       <div className="max-w-[1200px] mx-auto flex flex-col">
         
         {/* Header */}

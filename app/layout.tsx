@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${montserrat.variable} ${lora.variable} ${greatVibes.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${lora.variable} ${greatVibes.variable} scroll-smooth h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans">
         <Navbar />

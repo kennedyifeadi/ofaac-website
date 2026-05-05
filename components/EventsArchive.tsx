@@ -29,7 +29,7 @@ export default function EventsArchive() {
   ];
 
   return (
-    <section className="w-full bg-white py-24 px-4 sm:px-6 md:px-12 border-t border-zinc-100">
+    <section id="past-events" className="w-full bg-white py-24 px-4 sm:px-6 md:px-12 border-t border-zinc-100">
       <div className="max-w-[1200px] mx-auto flex flex-col items-center">
         
         <div className="text-center max-w-3xl mx-auto mb-20">
@@ -157,7 +157,7 @@ export default function EventsArchive() {
         </div>
 
         {/* ── Past Projects Section ──────────────────────────────── */}
-        <div className="w-full mt-24 pt-16">
+        <div id="past-projects" className="w-full mt-24 pt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
               <div className="flex items-center gap-4 mb-4">

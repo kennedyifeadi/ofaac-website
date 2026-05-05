@@ -17,7 +17,8 @@ const eventsData = [
     title: "Anioma Cultural Festival",
     text: "Each year, the Anioma Cultural Festival brings together our community in a vibrant celebration. The journey started in 2004 with the inaugural edition and has since been held every year on Easter Monday, gracefully honoring our traditions.",
     image: DSC_38, 
-    linkText: "Explore Festival"
+    linkText: "Explore Festival",
+    linkHref: "/about#journey-of-impact"
   },
   {
     id: 1,
@@ -25,7 +26,8 @@ const eventsData = [
     title: "Annual Lecture Series",
     text: "Since its inception in 2005, the Anioma Annual Lecture Series has provided a critical platform for intellectual engagement on topics vital to Anioma culture and development. Featuring renowned scholars, these lectures foster dialogue for good governance.",
     image: AniomaLecture, 
-    linkText: "Read Archives"
+    linkText: "Read Archives",
+    linkHref: "/events#past-events"
   },
   {
     id: 2,
@@ -33,7 +35,8 @@ const eventsData = [
     title: "Research & Publication",
     text: "In fulfillment of the yearning desire to create a sense of natural identity among the people, OFAAC engages in deep research and documentation. This structural foundation powers the Anioma Essence Magazine and extensive compilation DVDs.",
     image: ResearchAndPublication, 
-    linkText: "View Publications"
+    linkText: "View Publications",
+    linkHref: "/about#journey-of-impact"
   },
   {
     id: 3,
@@ -41,7 +44,8 @@ const eventsData = [
     title: "Micro Credit Scheme",
     text: "OFAAC is saddled with the onerous task of helping boost small scale businesses within the Anioma communities. By engaging interested participants in entrepreneurial development, our scheme has successfully empowered over 1000 individuals to date.",
     image: MicroCreditScheme, 
-    linkText: "Learn More"
+    linkText: "Learn More",
+    linkHref: "/events#past-projects"
   }
 ];
 
@@ -144,7 +148,7 @@ export default function EventsSection() {
                    </span>
                 </div>
 
-                <Link href="/events" className="inline-flex items-center gap-2 font-sans text-xs font-bold tracking-widest uppercase border-b-2 border-zinc-900 pb-1 w-max hover:text-gold-dark hover:border-gold-dark transition-colors group">
+                <Link href={eventsData[activeTab].linkHref} className="inline-flex items-center gap-2 font-sans text-xs font-bold tracking-widest uppercase border-b-2 border-zinc-900 pb-1 w-max hover:text-gold-dark hover:border-gold-dark transition-colors group">
                   {eventsData[activeTab].linkText}
                   <ArrowUpRight size={16} className="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </Link>
