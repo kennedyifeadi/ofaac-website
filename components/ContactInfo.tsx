@@ -9,10 +9,6 @@ const contactBlocks = [
     title: "Call Us",
     lines: [
       "+234 803 307 0480",
-      "+234 812 382 5314",
-      "+234 803 403 1985",
-      "+234 803 308 6618",
-      "+234 803 305 3183",
       "+234 703 460 1607",
     ],
   },
@@ -37,8 +33,8 @@ const contactBlocks = [
     icon: MapPin,
     title: "Our Offices",
     lines: [
-      "287 Nnebisi Road, Asaba, Delta State",
-      "1 Engineering Close, V/Island, Lagos",
+      "OFAAC office 287 Nnebisi road",
+      "by slot opposite sterling bank",
     ],
   },
 ];

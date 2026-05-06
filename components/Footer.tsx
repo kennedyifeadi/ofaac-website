@@ -55,13 +55,20 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-gold-dark shrink-0 mt-0.5" />
                 <span className="leading-relaxed">
-                  Placeholder Address Line 1<br />
+                  OFAAC office 287 Nnebisi road<br />
+                  by slot opposite sterling bank,<br />
                   Asaba, Delta State, Nigeria
                 </span>
               </li>
-              <li className="flex items-center gap-3 hover:text-gold transition-colors">
-                <Phone size={18} className="text-gold-dark shrink-0" />
-                <a href="tel:+2340000000000">+234 (0) 000 000 0000</a>
+              <li className="flex flex-col gap-2">
+                <div className="flex items-center gap-3 hover:text-gold transition-colors">
+                  <Phone size={18} className="text-gold-dark shrink-0" />
+                  <a href="tel:+2348033070480">+234 803 307 0480</a>
+                </div>
+                <div className="flex items-center gap-3 hover:text-gold transition-colors">
+                  <Phone size={18} className="text-gold-dark shrink-0 opacity-0" />
+                  <a href="tel:+2347034601607">+234 703 460 1607</a>
+                </div>
               </li>
               <li className="flex items-center gap-3 hover:text-gold transition-colors">
                 <Mail size={18} className="text-gold-dark shrink-0" />

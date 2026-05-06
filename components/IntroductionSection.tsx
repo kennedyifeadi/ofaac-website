@@ -32,15 +32,15 @@ export default function IntroductionSection() {
           {/* ── Key Festival Stats Strip ── */}
           <div className="mt-10 grid grid-cols-2 gap-4 border-t border-zinc-200 pt-8">
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">20,000<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">27,000<span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Total festival reach annually — online &amp; on-ground</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">9,000<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">13,000<span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Physical attendees at the Anioma Cultural Festival</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">15<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">21<span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Traditional rulers &amp; royal leaders attending each edition</span>
             </div>
             <div className="flex flex-col">

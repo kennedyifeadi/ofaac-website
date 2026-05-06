@@ -7,7 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 const achievements = [
   {
     title: "Anioma Cultural Festival",
-    description: "The annual Anioma Cultural Festival, held every Easter Monday — now widely declared Anioma Day — has grown into one of Nigeria's most celebrated cultural gatherings. Each edition draws over 9,000 physical attendees and reaches more than 20,000 people online and on-ground, with 15+ traditional rulers and royal leaders in attendance. It is a powerful platform for traditional dances, arts, crafts, and cuisine, fostering deep unity across the nine LGAs of Anioma land.",
+    description: "The annual Anioma Cultural Festival, held every Easter Monday — now widely declared Anioma Day — has grown into one of Nigeria's most celebrated cultural gatherings. Each edition draws over 13,000 physical attendees and reaches more than 27,000 people online and on-ground, with 21+ traditional rulers and royal leaders in attendance. It is a powerful platform for traditional dances, arts, crafts, and cuisine, fostering deep unity across the nine LGAs of Anioma land.",
     year: "Annual"
   },
   {
@@ -32,7 +32,7 @@ const achievements = [
   },
   {
     title: "Unity and Friendship",
-    description: "Through its diverse activities, OFAAC has successfully built unity and friendship amongst its members across the four zones of Aniocha, Ika, Ndokwa, and Oshimili.",
+    description: "Through its diverse activities, OFAAC has successfully built unity and friendship amongst its members across the six LGAs of Aniocha South, Aniocha North, Ukwuani, Ika, Ndokwa, and Oshimili.",
     year: "Community"
   }
 ];

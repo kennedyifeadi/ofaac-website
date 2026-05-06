@@ -67,9 +67,9 @@ export default function SponsorWhy() {
           className="grid grid-cols-2 md:grid-cols-4 gap-px bg-zinc-200 rounded-3xl overflow-hidden mb-16 shadow-sm"
         >
           {[
-            { number: "20,000+", label: "Total annual reach — online & on-ground" },
-            { number: "9,000+",  label: "Physical attendees per festival edition" },
-            { number: "15+",     label: "Traditional rulers & royal leaders in attendance" },
+            { number: "27,000+", label: "Total annual reach — online & on-ground" },
+            { number: "13,000+",  label: "Physical attendees per festival edition" },
+            { number: "21+",     label: "Traditional rulers & royal leaders in attendance" },
             { number: "Easter Monday", label: "Declared Anioma Day — Nigeria's most vibrant cultural celebration", gold: true },
           ].map((stat, i) => (
             <div key={i} className="bg-white flex flex-col items-start justify-center px-6 py-8 gap-2">
