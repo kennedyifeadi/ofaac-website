@@ -62,11 +62,32 @@ export default function ContactInfo() {
 
             {/* Lines */}
             <div className="flex flex-col gap-1">
-              {block.lines.map((line, i) => (
-                <p key={i} className="font-sans text-zinc-500 text-sm leading-relaxed">
-                  {line}
-                </p>
-              ))}
+              {block.lines.map((line, i) => {
+                let href = null;
+                if (line.includes("@")) {
+                  href = `mailto:${line}`;
+                } else if (line.startsWith("+")) {
+                  href = `tel:${line.replace(/\s+/g, "")}`;
+                }
+
+                if (href) {
+                  return (
+                    <a
+                      key={i}
+                      href={href}
+                      className="font-sans text-zinc-500 hover:text-gold-dark transition-colors text-sm leading-relaxed"
+                    >
+                      {line}
+                    </a>
+                  );
+                }
+
+                return (
+                  <p key={i} className="font-sans text-zinc-500 text-sm leading-relaxed">
+                    {line}
+                  </p>
+                );
+              })}
             </div>
           </motion.div>
         ))}
