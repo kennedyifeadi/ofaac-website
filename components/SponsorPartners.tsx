@@ -27,7 +27,7 @@ const partners: { name: string; logo: StaticImageData }[] = [
 
 export default function SponsorPartners() {
   return (
-    <section id="sponsor-partners" className="w-full bg-background py-24 px-6">
+    <section id="valued-supporters" className="w-full bg-background py-24 px-6">
       <div className="max-w-6xl mx-auto text-center">
 
         <motion.div
