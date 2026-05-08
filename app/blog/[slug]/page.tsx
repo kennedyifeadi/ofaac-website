@@ -4,12 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import CTASection from "@/components/CTASection";
-import { getBlogPost, blogPosts } from "@/lib/blog-data";
+import { getAllBloggerPosts, getBloggerPostBySlug } from "@/lib/blogger";
 import { ArrowLeft, Clock, User, Calendar } from "lucide-react";
 
 // Generate all static slugs at build time
-export function generateStaticParams() {
-  return blogPosts.map(p => ({ slug: p.slug }));
+export async function generateStaticParams() {
+  const posts = await getAllBloggerPosts();
+  return posts.map(p => ({ slug: p.slug }));
 }
 
 // Dynamic metadata per post
@@ -19,7 +20,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getBloggerPostBySlug(slug);
   if (!post) return { title: "Post Not Found" };
   return {
     title: `${post.title} | OFAAC Blog`,
@@ -33,11 +34,13 @@ export default async function BlogPostPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = await getBloggerPostBySlug(slug);
   if (!post) notFound();
 
+  const allPosts = await getAllBloggerPosts();
+
   // Suggested posts (same category, excluding current)
-  const related = blogPosts
+  const related = allPosts
     .filter(p => p.slug !== post.slug && p.category === post.category)
     .slice(0, 3);
 

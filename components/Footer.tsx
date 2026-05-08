@@ -69,6 +69,10 @@ export default function Footer() {
                   <Phone size={18} className="text-gold-dark shrink-0 opacity-0" />
                   <a href="tel:+2347034601607">+234 703 460 1607</a>
                 </div>
+                <div className="flex items-center gap-3 hover:text-gold transition-colors">
+                  <Phone size={18} className="text-gold-dark shrink-0 opacity-0" />
+                  <a href="tel:+2348067280918">+234 806 728 0918</a>
+                </div>
               </li>
               <li className="flex items-center gap-3 hover:text-gold transition-colors">
                 <Mail size={18} className="text-gold-dark shrink-0" />

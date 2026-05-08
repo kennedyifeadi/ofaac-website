@@ -6,15 +6,15 @@ import LeadershipGrid from "@/components/LeadershipGrid";
 import CTASection from "@/components/CTASection";
 
 // ── Image imports ────────────────────────────────────────────────
-import imgChikeEdozien    from "@/public/Late Obi Prof Chike Edozien.png";
-import imgBSCElue         from "@/public/Chief B.S.C. Elue.png";
+import imgChikeEdozien    from "@/public/Late Obi Prof Chike Edozien.jpeg";
+import imgBSCElue         from "@/public/Chief B.S.C. Elue.jpeg";
 import imgMarthaDunkwu    from "@/public/Late Dr. Martha Dunkwu.png";
 
-import imgNewtonJibunoh   from "@/public/Dr Newton Jibunoh.png";
+import imgNewtonJibunoh   from "@/public/Dr Newton Jibunoh.jpeg";
 import imgPhilipAsiodu    from "@/public/Chief Philip Asiodu.png";
 import imgFortuneEbie     from "@/public/Late Sir Fortune Ebie.png";
-import imgPatUtomi        from "@/public/Prof. Pat Utomi.png";
-import imgKesterIfeadi    from "@/public/Arc. Kester Ifeadi.png";
+import imgPatUtomi        from "@/public/Prof. Pat Utomi.jpeg";
+import imgKesterIfeadi    from "@/public/Arc. Kester Ifeadi.jpeg";
 import imgEmekaNmadu      from "@/public/Late Emeka Nmadu.png";
 
 import imgPaddyUgboh      from "@/public/Elder Paddy Ugboh.png";

@@ -5,15 +5,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowUpRight, Clock, User } from "lucide-react";
-import { blogPosts, BLOG_CATEGORIES, type BlogCategory } from "@/lib/blog-data";
+import { BLOG_CATEGORIES, type BlogCategory, type BlogPost } from "@/lib/blog-data";
 
-export default function BlogMain() {
+export default function BlogMain({ posts }: { posts: BlogPost[] }) {
   const [activeCategory, setActiveCategory] = useState<BlogCategory | null>(null);
+  const [visibleCount, setVisibleCount] = useState(15);
 
-  const featured = blogPosts.find(p => p.featured) ?? blogPosts[0];
+  const handleCategoryChange = (cat: BlogCategory | null) => {
+    setActiveCategory(cat);
+    setVisibleCount(15);
+  };
+
+  const featured = posts.find(p => p.featured) ?? posts[0];
   const filtered = activeCategory
-    ? blogPosts.filter(p => p.category === activeCategory)
-    : blogPosts;
+    ? posts.filter(p => p.category === activeCategory)
+    : posts;
 
   // exclude featured from the grid unless a category is active
   const gridPosts = activeCategory
@@ -45,7 +51,7 @@ export default function BlogMain() {
           className="flex flex-wrap items-center gap-2 mb-12"
         >
           <button
-            onClick={() => setActiveCategory(null)}
+            onClick={() => handleCategoryChange(null)}
             className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
               !activeCategory
                 ? "bg-zinc-900 text-white"
@@ -57,7 +63,7 @@ export default function BlogMain() {
           {BLOG_CATEGORIES.map(cat => (
             <button
               key={cat}
-              onClick={() => setActiveCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`px-5 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
                 activeCategory === cat
                   ? "bg-zinc-900 text-white"
@@ -85,7 +91,8 @@ export default function BlogMain() {
                     src={featured.image}
                     alt={featured.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, 55vw"
+                    className="object-cover object-[10%_20%] transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 {/* Text */}
@@ -126,7 +133,7 @@ export default function BlogMain() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {gridPosts.map((post, idx) => (
+            {gridPosts.slice(0, visibleCount).map((post, idx) => (
               <motion.div
                 key={post.slug}
                 initial={{ opacity: 0, y: 20 }}
@@ -142,7 +149,8 @@ export default function BlogMain() {
                         src={post.image}
                         alt={post.title}
                         fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        className="object-cover object-[20%_20%] transition-transform duration-700 group-hover:scale-105"
                       />
                     </div>
                     {/* Card body */}
@@ -167,6 +175,18 @@ export default function BlogMain() {
               </motion.div>
             ))}
           </div>
+
+          {/* Load More Button */}
+          {visibleCount < gridPosts.length && (
+            <div className="mt-12 flex justify-center">
+              <button
+                onClick={() => setVisibleCount((prev) => prev + 15)}
+                className="px-8 py-3 rounded-full bg-zinc-900 text-white font-semibold text-sm hover:bg-gold-dark transition-colors duration-300 shadow-md hover:shadow-lg"
+              >
+                Load More Articles
+              </button>
+            </div>
+          )}
         </div>
 
       </div>

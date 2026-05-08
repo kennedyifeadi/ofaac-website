@@ -6,6 +6,8 @@ import DSC_63 from "@/public/DSC_63.jpg";
 import DSC_64 from "@/public/DSC_64.jpg";
 import DSC_66 from "@/public/DSC_66.jpg";
 import DSC_68 from "@/public/DSC_68.jpg";
+import imgBlog1 from "@/public/Blog 1.jpg";
+import imgBlog2 from "@/public/Blog 2.jpg";
 import { StaticImageData } from "next/image";
 
 export type BlogCategory =
@@ -22,12 +24,59 @@ export interface BlogPost {
   author: string;
   date: string;
   readTime: string;
-  image: StaticImageData;
+  image: StaticImageData | string;
   content: string; // HTML string
   featured?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "artemis-ii-aniomas-prof-emeritus-esogbue-nasa-safety",
+    title: "Artemis II: Anioma's Prof. Emeritus Esogbue and the Legacy of NASA Safety",
+    excerpt:
+      "While the world watches the progress of the Artemis II mission, there is a significant story of African contribution behind the safety frameworks making such a feat possible.",
+    category: "Community Spotlights",
+    author: "Emeka Esogbue",
+    date: "April 10, 2026",
+    readTime: "5 min read",
+    image: imgBlog2,
+    featured: true,
+    content: `
+      <p>While the world watches the progress of the Artemis II mission, NASA’s ambitious crewed journey around the Moon, there is a significant story of African contribution behind the safety frameworks making such a feat possible. At the heart of this legacy is Professor Emeritus Augustine Onwuyali Esogbue, a Nigerian-born visionary who served with distinction on NASA’s Aerospace Safety Advisory Panel (ASAP).</p>
+      <p>Artemis II marks a pivotal moment in human history. As the first crewed mission of the Artemis program, it sends astronauts aboard the Orion spacecraft on a high-stakes lunar flyby. This "dress rehearsal" is historic not only for its technical complexity but for its representation: the mission includes the first woman and the first Black astronaut to travel to lunar orbit.</p>
+      <p>While the astronauts are the face of the mission, the Aerospace Safety Advisory Panel (ASAP) is its foundational and mechanical strength. Mandated by the U.S. Congress, ASAP provides independent, expert oversight of NASA’s safety performance. The panel evaluates risks, scrutinizes engineering decisions, and maintains the safety culture necessary for human spaceflight.</p>
+      <p>Simply put: ASAP ensures that every risk is minimized before a single soul leaves the launchpad.</p>
+      <p>Prof. Esogbue’s involvement during one of NASA’s most critical eras. Following the Space Shuttle Columbia disaster, NASA reconstituted the ASAP in 2003 to overhaul its safety protocols. Prof. Esogbue was appointed as part of this elite new panel.</p>
+      <p>His tenure coincided with the "Return to Flight" efforts, a period of intense reconstruction of NASA’s safety culture. By strengthening decision-making frameworks and risk evaluation, Prof. Esogbue and his colleagues laid the groundwork for the modern standards that govern the Artemis missions today. In recognition of his service, he was awarded the NASA Public Service Medal in 2006.</p>
+      <p>Born into the Esogbue family in Umuafene, Isieke—part of the Ibusa community of Anioma, Prof. Esogbue has become a global symbol of African excellence in science. Having spent much of his distinguished career as a researcher and professor at the Georgia Institute of Technology, he remains a bridge between his Nigerian roots and the frontiers of space exploration.</p>
+      <p>Reflecting on the success of the Artemis program, Prof. Esogbue shared:</p>
+      <blockquote class="border-l-4 border-gold pl-4 italic text-zinc-600 my-4">"I am proud of what we in the US whose Safety Advisory Board of NASA I meritoriously served on, accomplished; a unique feat in human space flight around the Moon. I am proud of my association, all by God's divine providence."</blockquote>
+      <p>He further told Pen Master:</p>
+      <blockquote class="border-l-4 border-gold pl-4 italic text-zinc-600 my-4">"Tomorrow is a busy day for us all here with the expected splash down and usually the most dangerous part of human space flight. DV. all will go right with this historic fly by moon journey."</blockquote>
+      <p>Prof Emeritus Augustine Onwuyali Esogbue, NNOM, honoured with "emeritus" for his professorial excellence, is also the Diokpa of Umuafene back home.</p>
+      <p>Knowing the Ibusa community is knowing the home of some of the global achievers; knowing the Anioma nation, is knowing the Nigerian "bride" of great accomplishers.</p>
+    `,
+  },
+  {
+    slug: "fieldwork-visit-to-umuebu-kingdom",
+    title: "Fieldwork Visit to Umuebu Kingdom: Exploring Anioma Heritage",
+    excerpt:
+      "Our Anioma Heritage Project (AHP) conducted a fieldwork Visit to Umuebu Kingdom near Obiaruku in Ukwuani LGA, exploring rich cultural traditions.",
+    category: "Cultural Insights",
+    author: "Emeka Esogbue",
+    date: "April 24, 2024",
+    readTime: "3 min read",
+    image: imgBlog1,
+    content: `
+      <p>So, our Anioma Heritage Project (AHP) led by my humble self, conducted a fieldwork Visit to Umuebu Kingdom near Obiaruku in Ukwuani LGA of Delta State.</p>
+      <p>We were received at the palace of the Ebu of Umuebu, where we met with the traditional ruler and a gathering of chiefs. The chiefs, numbering about twenty-five, were colourfully attired in traditional Ukwuani regalia; a coordinated uniforms that reflected both cultural pride and unity. They were well-prepared and eager to engage with us.</p>
+      <p>Among our hosts was His Royal Majesty, Donald Ekereuche, the Ebu of Umuebu, who proved to be highly learned, enlightened, and warmly disposed toward our research objectives. He demonstrated exceptional cooperation throughout the visit, personally responding to a substantial portion of our interview questions. The palace chiefs were equally impressive—disciplined, knowledgeable, and deeply grounded in the cultural and historical traditions of their community.</p>
+      <p>His Majesty facilitated our visit to selected locations of cultural significance. It greatly enriched the scope and depth of our research. Overall, the visit to Umuebu Kingdom stands out as one of the most vibrant and enlightening experiences of our fieldwork thus far.</p>
+      <p>Many thanks to the Organization For the Advancement of Anioma Culture (OFAAC), initiators of the project.</p>
+      <p>Enjoy photos from the visit.</p>
+      <p><em>Courtesy: Pen Master</em></p>
+    `,
+  },
   {
     slug: "culture-as-power-anioma-rises-at-ofaac-20th-cultural-festival",
     title: "Culture as Power: Anioma Rises at OFAAC 20th Cultural Festival",

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import BlogMain from "@/components/BlogMain";
+import { getAllBloggerPosts } from "@/lib/blogger";
 import CTASection from "@/components/CTASection";
 
 export const metadata: Metadata = {
@@ -9,11 +10,13 @@ export const metadata: Metadata = {
     "Explore the OFAAC blog for engaging articles on Anioma culture, event updates, community spotlights, and historical insights. Dive deep into the traditions and vibrant life of the Anioma people.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const posts = await getAllBloggerPosts();
+
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
-      <BlogMain />
+      <BlogMain posts={posts} />
       <CTASection />
     </main>
   );

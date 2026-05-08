@@ -11,6 +11,14 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "res.cloudinary.com",
       },
+      {
+        protocol: "https",
+        hostname: "bp.blogspot.com",
+      },
+      {
+        protocol: "https",
+        hostname: "blogger.googleusercontent.com",
+      },
     ],
   },
 };
