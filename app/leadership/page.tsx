@@ -40,7 +40,7 @@ const patrons = [
     image: imgChikeEdozien,
   },
   {
-    name: "Chief B.S.C. Elue",
+    name: "Late Chief B.S.C. Elue",
     role: "Founding Patron",
     bio: "A distinguished leader whose foresight and early guidance were instrumental in shaping OFAAC's strategic direction. His contributions remain a guiding light for our community empowerment initiatives.",
     image: imgBSCElue,
