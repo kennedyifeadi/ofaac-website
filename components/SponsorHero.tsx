@@ -9,7 +9,7 @@ import DSC_63 from "@/public/DSC_63.jpg";
 
 export default function SponsorHero() {
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string): void => {
     const el = document.getElementById(id);
     if (el) {
       el.scrollIntoView({ behavior: "smooth", block: "start" });
@@ -39,7 +39,7 @@ export default function SponsorHero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-sans text-base md:text-lg text-zinc-500 leading-relaxed max-w-2xl mx-auto mb-10"
         >
-          Invest in culture, impact a community. Join us in preserving, promoting, and advancing the rich cultural heritage of the Anioma people.
+          Invest in culture, impact a community development and Join us in preserving, promoting, and advancing the rich cultural heritage of the Anioma people.
         </motion.p>
 
         <motion.div

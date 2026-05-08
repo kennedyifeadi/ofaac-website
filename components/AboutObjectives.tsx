@@ -18,9 +18,9 @@ const objectives = [
     image: DSC_38,
   },
   {
-    title: "Youth Empowerment",
+    title: "Micro Credit Scheme",
     description:
-      "To instill positive self-esteem and a natural identity among the youth, connecting them with their roots.",
+      "To empower our members in small scale businesses like cloth weaving, bead making, stylist skills, farming, fashion designing, and small sales.",
     image: YouthEmpowerment,
   },
   {
