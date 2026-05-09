@@ -19,7 +19,7 @@ export const projectsData: Project[] = [
     date: "Ongoing",
     status: "Ongoing",
     tags: ["Heritage", "Cultural Preservation", "Community"],
-    image: "/Blog 1.jpg",
+    image: "/HeritageProject.jpeg",
     summary:
       "A palace-driven cultural and historical initiative established to preserve, document, and promote the rich heritage, traditions, and ancestral legacy of the Anioma people.",
     content: [

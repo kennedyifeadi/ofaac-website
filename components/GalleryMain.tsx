@@ -5,21 +5,23 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { X, SearchX, Maximize2, ChevronUp, Loader2 } from "lucide-react";
 import type { CloudinaryImage } from "@/app/api/gallery/route";
+import Link from "next/link";
 
 // ── Category definitions ────────────────────────────────────────
 const PRIMARY_CATEGORIES = [
   "All",
-  "Anioma Festival 2023",
-  "Anioma Festival 2024",
-  "Anioma Festival 2025",
   "Anioma Festival 2026",
+  "Anioma Festival 2025",
+  "Anioma Festival 2024",
+  "Anioma Festival 2023",
+  "Heritage Project",
   "Anioma Lecture",
-  "Dances",
   "Dignitaries",
   "Leadership",
+  "Visitations",
 ];
 
-const MORE_CATEGORIES = ["Visitations"];
+const MORE_CATEGORIES = ["Dances"];
 
 // ── Types ───────────────────────────────────────────────────────
 type GalleryImage = {
@@ -252,10 +254,11 @@ export default function GalleryMain() {
                 <span className="font-bold text-gold-dark">{activeCategory}</span> category yet. Check back soon!
               </p>
               <button
-                onClick={() => setActiveCategory("All")}
                 className="mt-8 text-gold-dark font-sans font-bold text-sm uppercase tracking-widest hover:text-gold transition-colors underline underline-offset-4"
               >
+                <Link target="_blank" href="https://drive.google.com/drive/folders/1T_MytPiKdNanNfP6qpfZK89hnKXNzACB?usp=sharing">
                 View All Photos
+                </Link>
               </button>
             </motion.div>
           )}

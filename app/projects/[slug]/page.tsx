@@ -34,7 +34,7 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-white pt-24 md:pt-32 pb-24">
+    <div className="flex flex-col min-h-screen bg-white pt-8 pb-24">
       <div className="max-w-[1000px] mx-auto w-full px-6 sm:px-8">
         
         {/* Back Navigation */}

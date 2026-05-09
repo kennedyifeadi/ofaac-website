@@ -14,6 +14,7 @@ const CATEGORY_MAP: Record<string, CategoryEntry> = {
   "Anioma Festival 2025": { type: "folder", value: "Anioma_Festival_2025" },
   "Anioma Festival 2026": { type: "folder", value: "Anioma_Festival_2026" },
   "Anioma Lecture":       { type: "folder", value: "Anioma_Lecture" },
+  "Heritage Project":    { type: "folder", value: "Heritage_project" },
   Dances:                 { type: "folder", value: "Dances" },
   Dignitaries:            { type: "folder", value: "Dignitaries" },
   Leadership:             { type: "folder", value: "Leadership" },
