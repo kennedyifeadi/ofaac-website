@@ -208,7 +208,7 @@ export default function FestivalHighlight() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="relative bg-white rounded-4xl overflow-hidden border border-zinc-100 transition-all duration-500 group flex flex-col min-h-[420px]"
+              className="relative rounded-4xl overflow-hidden border border-zinc-100 transition-all duration-500 group flex flex-col min-h-[420px]"
             >
               <div className="absolute top-0 left-0 w-full h-56 md:h-64 group-hover:h-full transition-all duration-500 ease-in-out z-0 overflow-hidden">
                 <Image 
@@ -228,7 +228,7 @@ export default function FestivalHighlight() {
 
               <div className="h-56 md:h-64 w-full shrink-0" />
 
-              <div className="relative z-10 p-8 flex-1 flex flex-col bg-white group-hover:bg-transparent transition-colors duration-500">
+              <div className="relative z-10 p-8 flex-1 flex flex-col">
                 <h3 className="font-sans font-bold text-xl text-zinc-900 group-hover:text-white transition-colors duration-500 mb-3">{feature.title}</h3>
                 <p className="font-sans text-sm md:text-base text-zinc-500 group-hover:text-zinc-200 transition-colors duration-500 leading-relaxed">
                   {feature.description}
