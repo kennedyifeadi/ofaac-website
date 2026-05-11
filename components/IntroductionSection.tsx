@@ -1,9 +1,33 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-import image from "@/public/ImageOfMap.png"
+import image from "@/public/ImageOfMap.png";
+import { animate, useInView } from "framer-motion";
+
+function Counter({ value }: { value: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [display, setDisplay] = useState("0");
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const controls = animate(0, value, {
+      duration: 2,
+      ease: "easeOut",
+      onUpdate: (latest) => {
+        setDisplay(Intl.NumberFormat("en-US").format(Math.floor(latest)));
+      },
+    });
+
+    return () => controls.stop();
+  }, [isInView, value]);
+
+  return <span ref={ref}>{display}</span>;
+}
 
 export default function IntroductionSection() {
   return (
@@ -32,15 +56,15 @@ export default function IntroductionSection() {
           {/* ── Key Festival Stats Strip ── */}
           <div className="mt-10 grid grid-cols-2 gap-4 border-t border-zinc-200 pt-8">
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">27,000<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900"><Counter value={27000} /><span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Total festival reach annually — online &amp; on-ground</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">13,000<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900"><Counter value={13000} /><span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Physical attendees at the Anioma Cultural Festival</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900">21<span className="text-gold-dark">+</span></span>
+              <span className="font-serif text-3xl sm:text-4xl font-bold text-zinc-900"><Counter value={21} /><span className="text-gold-dark">+</span></span>
               <span className="font-sans text-xs text-zinc-500 mt-1 leading-snug">Traditional rulers &amp; royal leaders attending each edition</span>
             </div>
             <div className="flex flex-col">
