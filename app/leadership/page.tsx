@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import LeadershipHero from "@/components/LeadershipHero";
 import LeadershipFeatured from "@/components/LeadershipFeatured";
 import LeadershipGrid from "@/components/LeadershipGrid";
+import LeadershipZones from "@/components/LeadershipZones";
 import CTASection from "@/components/CTASection";
 
 // ── Image imports ────────────────────────────────────────────────
@@ -201,6 +202,10 @@ export default function LeadershipPage() {
           members={directors}
         />
       </div>
+
+      {/* Heritage Project Steering Committee & Zone Teams */}
+      <LeadershipZones />
+
       <CTASection />
     </main>
   );

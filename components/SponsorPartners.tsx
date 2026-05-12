@@ -55,7 +55,7 @@ export default function SponsorPartners() {
               transition={{ delay: idx * 0.06, duration: 0.4 }}
               className="group bg-white rounded-2xl h-24 md:h-32 flex items-center justify-center p-4 border border-zinc-100 hover:border-gold/40 hover:shadow-md transition-all duration-300 overflow-hidden"
             >
-              <div className="relative w-full h-full grayscale group-hover:grayscale-0 opacity-60 group-hover:opacity-100 transition-all duration-500">
+              <div className="relative w-full h-full">
                 <Image
                   src={partner.logo}
                   alt={partner.name}

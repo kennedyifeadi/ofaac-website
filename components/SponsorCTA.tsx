@@ -56,7 +56,7 @@ export default function SponsorCTA() {
             className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
             {/* Primary Filled Button */}
-            <a href="mailto:sponsorship@ofaac.org" className="w-full sm:w-auto">
+            <a href="mailto:info@ofaac.org" className="w-full sm:w-auto">
               <button className="w-full sm:w-auto flex items-center justify-center gap-3 bg-gold-dark text-white px-8 py-4 rounded-full font-sans font-bold uppercase tracking-widest text-xs lg:text-sm hover:bg-gold transition-all duration-300 transform">
                 <Mail size={16} strokeWidth={2.5} />
                 Email Us

@@ -10,7 +10,7 @@ const contactBlocks = [
     lines: [
       "+234 803 307 0480",
       "+234 703 460 1607",
-      "+234 806 728 0918",
+      "+234 803 308 6618",
     ],
   },
   {
@@ -27,7 +27,6 @@ const contactBlocks = [
     title: "Write to Us",
     lines: [
       "info@ofaac.org",
-      "partnerships@ofaac.org",
     ],
   },
   {

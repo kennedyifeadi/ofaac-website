@@ -77,12 +77,22 @@ export default async function ProjectPage(props: { params: Promise<{ slug: strin
         </div>
 
         {/* Project Content */}
-        <article className="prose prose-lg prose-zinc max-w-[800px] mx-auto font-sans leading-relaxed">
-          {project.content.map((paragraph, index) => (
-            <p key={index} className="mb-6 text-zinc-700">
-              {paragraph}
-            </p>
-          ))}
+        <article className="prose prose-lg prose-zinc max-w-[800px] mx-auto font-sans leading-relaxed
+          prose-headings:font-serif prose-headings:text-zinc-900 prose-headings:font-bold
+          prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4 prose-h2:border-b prose-h2:border-zinc-100 prose-h2:pb-3
+          prose-h3:text-xl prose-h3:mt-8 prose-h3:mb-3 prose-h3:text-gold-dark
+          prose-p:text-zinc-700 prose-p:leading-relaxed prose-p:mb-5
+          prose-ul:text-zinc-700 prose-li:mb-1.5
+          prose-strong:text-zinc-900">
+          {project.html ? (
+            <div dangerouslySetInnerHTML={{ __html: project.html }} />
+          ) : (
+            project.content.map((paragraph, index) => (
+              <p key={index} className="mb-6 text-zinc-700">
+                {paragraph}
+              </p>
+            ))
+          )}
         </article>
 
         {/* Tags */}
