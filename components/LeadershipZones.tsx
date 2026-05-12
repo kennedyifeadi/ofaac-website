@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Users, MapPin } from "lucide-react";
+import { Users } from "lucide-react";
 
 // ── Data ───────────────────────────────────────────────────────────
 

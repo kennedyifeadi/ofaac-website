@@ -18,7 +18,7 @@ import imgPatUtomi        from "@/public/Prof. Pat Utomi.jpeg";
 import imgKesterIfeadi    from "@/public/Arc. Kester Ifeadi.jpeg";
 import imgEmekaNmadu      from "@/public/Late Emeka Nmadu.png";
 
-import imgPaddyUgboh      from "@/public/Elder Paddy Ugboh.png";
+import imgPaddyUgboh      from "@/public/Elder Paddy Ugboh.jpeg";
 import imgMonnOlodu       from "@/public/Barr. Monn Olodu.png";
 import imgAfamUgah        from "@/public/Ogbuenyi Afam Ugah.png";
 import imgEmmaOgwu        from "@/public/Elder Emma Ogwu.png";
