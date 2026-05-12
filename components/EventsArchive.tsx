@@ -156,7 +156,7 @@ export default function EventsArchive() {
 
         </div>
 
-        {/* ── Past Projects Section ──────────────────────────────── */}
+        {/* ── Projects & Initiatives Section ──────────────────────────────── */}
         <div id="past-projects" className="w-full mt-24 pt-16">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
             <div>
@@ -164,10 +164,10 @@ export default function EventsArchive() {
                 <div className="w-12 h-12 rounded-full bg-gold-dark/10 flex items-center justify-center text-gold-dark">
                   <Building2 size={20} />
                 </div>
-                <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900">Past Projects & Initiatives</h3>
+                <h3 className="font-serif text-2xl md:text-3xl font-bold text-zinc-900">Ongoing Projects & Initiatives</h3>
               </div>
               <p className="font-sans text-sm md:text-base text-zinc-500 max-w-2xl leading-relaxed">
-                A chronicle of our developmental strides, community empowerments, and infrastructure projects aimed at uplifting the Anioma nation.
+                A chronicle of our ongoing developmental strides, community empowerments, and infrastructure projects aimed at uplifting the Anioma nation.
               </p>
             </div>
           </div>

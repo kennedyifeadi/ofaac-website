@@ -32,7 +32,7 @@ const achievements = [
   },
   {
     title: "Unity and Friendship",
-    description: "Through its diverse activities, OFAAC has successfully built unity and friendship amongst its members across the six LGAs of Aniocha South, Aniocha North, Ukwuani, Ika, Ndokwa, and Oshimili.",
+    description: "Through its diverse activities, OFAAC has successfully built unity and friendship amongst its members across the 9 LGAs of Aniocha South, Aniocha North, Ukwuani, Ika North, Ika South, Ndokwa, and Oshimili North, Oshimili South.",
     year: "Community"
   }
 ];

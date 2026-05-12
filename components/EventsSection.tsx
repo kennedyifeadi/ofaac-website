@@ -9,6 +9,7 @@ import DSC_38 from "@/public/DSC_38.jpg";
 import AniomaLecture from "@/public/AniomaLecture.png";
 import ResearchAndPublication from "@/public/Research and Publications.jpg";
 import MicroCreditScheme from "@/public/microcreditscheme.png";
+import Community2 from "@/public/Community2.jpg";
 
 const eventsData = [
   {
@@ -46,6 +47,15 @@ const eventsData = [
     image: MicroCreditScheme, 
     linkText: "Learn More",
     linkHref: "/events#past-projects"
+  },
+  {
+    id: 4,
+    shortTitle: "Health Insurance",
+    title: "Health Insurance Program",
+    text: "OFAAC has rolled out a comprehensive health insurance scheme for its members and interested traditional rulers across Anioma land. This initiative underscores our commitment to the holistic well-being of the Anioma people, ensuring access to healthcare for all.",
+    image: Community2, 
+    linkText: "Read More",
+    linkHref: "/about#journey-of-impact"
   }
 ];
 
