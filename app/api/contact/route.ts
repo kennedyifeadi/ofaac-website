@@ -44,7 +44,7 @@ export async function POST(request: Request) {
         // Notification to OFAAC admin
         const adminResult = await resend.emails.send({
           from: "OFAAC Website <onboarding@resend.dev>",
-          to: ["info@ofaac.org"],
+          to: ["ofaacofficial@gmail.com"], // OFAAC admin inbox
           subject: `New Contact Form Submission: ${subject || "General Inquiry"} from ${name}`,
           html: `
             <div style="font-family: sans-serif; color: #333; max-width: 600px; line-height: 1.6;">

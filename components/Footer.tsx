@@ -1,12 +1,41 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Phone, ArrowRight } from "lucide-react";
+import { Mail, MapPin, Phone, ArrowRight, Loader2 } from "lucide-react";
 import logo from "@/public/OFFAC_Logo.jpeg";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const [email, setEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [newsletterMsg, setNewsletterMsg] = useState("");
+
+  const handleNewsletterSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    setNewsletterStatus("loading");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        setNewsletterStatus("success");
+        setNewsletterMsg(data.message || "Successfully subscribed!");
+        setEmail("");
+      } else {
+        setNewsletterStatus("error");
+        setNewsletterMsg(data.message || "Something went wrong.");
+      }
+    } catch {
+      setNewsletterStatus("error");
+      setNewsletterMsg("Network error. Please try again.");
+    }
+  };
 
   return (
     <footer className="w-full bg-zinc-950 text-white font-sans border-t border-zinc-900">
@@ -88,19 +117,32 @@ export default function Footer() {
               Subscribe to our newsletter for the latest updates on the Anioma Cultural Festival and lectures.
             </p>
             
-            <form className="flex mt-2" onSubmit={(e) => e.preventDefault()}>
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 text-sm rounded-l-lg px-4 py-3 w-full focus:outline-none focus:border-gold transition-colors"
+            <form className="flex mt-2" onSubmit={handleNewsletterSubmit}>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                disabled={newsletterStatus === "loading" || newsletterStatus === "success"}
+                className="bg-zinc-900 border border-zinc-800 text-white placeholder-zinc-500 text-sm rounded-l-lg px-4 py-3 w-full focus:outline-none focus:border-gold transition-colors disabled:opacity-60"
               />
-              <button 
-                type="submit" 
-                className="bg-gold-dark hover:bg-gold text-white px-4 py-3 rounded-r-lg transition-colors flex items-center justify-center"
+              <button
+                type="submit"
+                disabled={newsletterStatus === "loading" || newsletterStatus === "success"}
+                className="bg-gold-dark hover:bg-gold text-white px-4 py-3 rounded-r-lg transition-colors flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <ArrowRight size={18} />
+                {newsletterStatus === "loading"
+                  ? <Loader2 size={18} className="animate-spin" />
+                  : <ArrowRight size={18} />}
               </button>
             </form>
+            {newsletterMsg && (
+              <p className={`text-xs mt-2 font-sans ${
+                newsletterStatus === "success" ? "text-green-400" : "text-red-400"
+              }`}>
+                {newsletterMsg}
+              </p>
+            )}
 
             {/* Social Icons using raw SVGs since Lucide dropped brand icons */}
             <div className="flex items-center gap-4 mt-4">
