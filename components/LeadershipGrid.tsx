@@ -8,6 +8,7 @@ interface Member {
   role: string;
   bio: string;
   image: StaticImageData;
+  objectPosition?: string; // optional per-image positioning override
 }
 
 interface LeadershipGridProps {
@@ -74,7 +75,8 @@ export default function LeadershipGrid({ title, description, members }: Leadersh
                   src={member.image}
                   alt={member.name}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
+                  style={{ objectPosition: member.objectPosition ?? "center top" }}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               </div>

@@ -35,7 +35,7 @@ const zones = [
     number: 2,
     name: "Aniocha South",
     members: [
-      { name: "Uche Oboko",           role: "Team Leader" },
+      { name: "Associate Professor Uche Oboko",           role: "Team Leader" },
       { name: "Dominic Marior Uduh",  role: "Resource Person 1" },
       { name: "Obi Christabel Adaeze",role: "Resource Person 2" },
       { name: "Kevin Oki",            role: "Resource Person 3" },
@@ -59,7 +59,7 @@ const zones = [
       { name: "Prof. Eric Eboh",                  role: "Team Leader" },
       { name: "Chief Jonathan Agbejiagwe Ohioya",  role: "Resource Person" },
       { name: "Prince Kester Nkemachor",           role: "Logistics Person" },
-      { name: "Mr. Amos Chukwuekwu",              role: "Technical Officer" },
+      // { name: "Mr. Amos Chukwuekwu",              role: "Technical Officer" },
     ],
   },
   {

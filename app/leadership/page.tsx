@@ -26,6 +26,9 @@ import imgSundayOliseh    from "@/public/Emma Mr Sunday Oliseh.png";
 import imgDonatusItoro    from "@/public/Mr. Donatus Itoro.png";
 import imgJosephEgwu      from "@/public/Dr Joseph Egwu.png";
 import imgAndrewObi       from "@/public/Prince Andrew Obi.png";
+import imgEfeizomor       from "@/public/Dr Emmanuel Efeizomor II.jpg";
+import imgOkowa           from "@/public/Former Governor Dr. Arthur Ifeanyi Okowa.jpg";
+import imgKikachukwu      from "@/public/Obi Henry Kikachukwu.jpg";
 // ────────────────────────────────────────────────────────────────
 
 export const metadata: Metadata = {
@@ -41,6 +44,12 @@ const patrons = [
     image: imgChikeEdozien,
   },
   {
+    name: "Dr. Emmanuel Efeizomor II",
+    role: "Grand Patron — Obi of Owa Kingdom",
+    bio: "His Royal Majesty Dr. Emmanuel Efeizomor II, the Obi of Owa Kingdom, is a distinguished royal and dedicated advocate for Anioma culture. His wisdom, stature, and commitment to the cultural advancement of the Anioma people make him an invaluable patron of OFAAC.",
+    image: imgEfeizomor,
+  },
+  {
     name: "Late Chief B.S.C. Elue",
     role: "Founding Patron",
     bio: "A distinguished leader whose foresight and early guidance were instrumental in shaping OFAAC's strategic direction. His contributions remain a guiding light for our community empowerment initiatives.",
@@ -51,6 +60,21 @@ const patrons = [
     role: "Founding Patron",
     bio: "The Omu of Okpanam and Anioma, her fierce advocacy for cultural preservation and women's roles in traditional leadership significantly strengthened OFAAC's cultural mandate and outreach.",
     image: imgMarthaDunkwu,
+  },
+];
+
+const patronsSection = [
+  {
+    name: "Former Governor Dr. Arthur Ifeanyi Okowa",
+    role: "Patron — Former Governor of Delta State",
+    bio: "A statesman, medical doctor, and former two-term Governor of Delta State, Dr. Arthur Ifeanyi Okowa has been a steadfast champion of cultural identity and community development across the Anioma nation. His support lends great prestige and encouragement to OFAAC's mission.",
+    image: imgOkowa,
+  },
+  {
+    name: "Obi Henry Kikachukwu",
+    role: "Patron — Obi of Ubulu Unor",
+    bio: "His Royal Majesty Obi Henry Kikachukwu, the Obi of Ubulu Unor, is a proud custodian of Anioma royal heritage and traditions. His patronage underscores the deep partnership between OFAAC and the traditional institutions that safeguard the cultural identity of the Anioma people.",
+    image: imgKikachukwu,
   },
 ];
 
@@ -123,6 +147,7 @@ const directors = [
     role: "Member",
     bio: "A committed director whose hands-on approach and dedication significantly contribute to the success of our grassroots cultural initiatives.",
     image: imgAfamUgah,
+    objectPosition: "center 20%",
   },
   {
     name: "Elder Emma Ogwu Emma",
@@ -193,6 +218,29 @@ export default function LeadershipPage() {
         description="The BOT provides overarching strategic direction and oversight, ensuring OFAAC remains true to its foundational principles. Chaired by a distinguished personality, the BOT is composed of eminent individuals with a deep commitment to Anioma culture."
         members={botMembers}
       />
+
+      {/* Patrons Section */}
+      <section className="bg-zinc-50 py-10 px-6 border-t border-zinc-100">
+        <div className="max-w-6xl mx-auto mb-12 text-left">
+          <h2 className="text-3xl md:text-4xl font-bold font-serif text-zinc-900 inline-block relative">
+            Patrons
+            <span className="absolute -bottom-2 left-0 w-1/2 h-1 bg-gold"></span>
+          </h2>
+          <p className="mt-6 text-zinc-500 font-sans max-w-2xl leading-relaxed">
+            OFAAC is honoured to be graced by the patronage of distinguished statesmen and royal leaders who lend their prestige, experience, and support to our cultural mission.
+          </p>
+        </div>
+        {patronsSection.map((patron, index) => (
+          <LeadershipFeatured
+            key={index}
+            name={patron.name}
+            role={patron.role}
+            bio={patron.bio}
+            image={patron.image}
+            reverse={index % 2 !== 0}
+          />
+        ))}
+      </section>
 
       {/* Board of Directors Section */}
       <div className="bg-white">
