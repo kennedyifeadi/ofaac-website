@@ -7,15 +7,16 @@ import { Users } from "lucide-react";
 
 const steeringCommittee = [
   { name: "Arc. Kester Ifeadi",         role: "President" },
-  { name: "Mr. Paddy Ufok",             role: "Vice President" },
+  { name: "Mr. Paddy Ugboh",             role: "Vice President" },
   { name: "Prof. Mokwunyei Josephine",  role: "Chairperson" },
   { name: "Prof. Eric Eboh",            role: "Member" },
   { name: "Prof. Oboko Uche",           role: "Member" },
   { name: "Mr. Ogwu Emmanuel",          role: "Member" },
   { name: "Chief Ndili",                role: "Member" },
   { name: "Chief Alfred",               role: "Member" },
-  { name: "Dr. Eneke Ezeobue",          role: "Secretary" },
-  { name: "Barr. Monu Ologbu",          role: "Member" },
+  { name: "Dr. Emeka Esogbue",          role: "Secretary" },
+  { name: "Barr. Monn Olodu",          role: "Member" },
+  {name: "Prince Walter Eziashi", role:"Member"},
   { name: "Prince Andrew Obi",          role: "National Coordinator" },
 ];
 

@@ -20,7 +20,7 @@ import imgEmekaNmadu      from "@/public/Late Emeka Nmadu.png";
 
 import imgPaddyUgboh      from "@/public/Elder Paddy Ugboh.jpeg";
 import imgMonnOlodu       from "@/public/Barr. Monn Olodu.png";
-import imgAfamUgah        from "@/public/Ogbuenyi Afam Ugah.png";
+import imgAfamUgah        from "@/public/Ogbuenyi Afam Ugah.jpeg";
 import imgEmmaOgwu        from "@/public/Elder Emma Ogwu.png";
 import imgSundayOliseh    from "@/public/Emma Mr Sunday Oliseh.png";
 import imgDonatusItoro    from "@/public/Mr. Donatus Itoro.png";
