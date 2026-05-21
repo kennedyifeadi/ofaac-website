@@ -73,7 +73,7 @@ const patronsSection = [
   {
     name: "Obi Henry Kikachukwu",
     role: "Patron — Obi of Ubulu Unor",
-    bio: "His Royal Majesty Obi Henry Kikachukwu, the Obi of Ubulu Unor, is a proud custodian of Anioma royal heritage and traditions. His patronage underscores the deep partnership between OFAAC and the traditional institutions that safeguard the cultural identity of the Anioma people.",
+    bio: "His Royal Majesty Obi Henry Kikachukwu, the Obi of Ubulu Unor and Second Vice Chairman of the Delta State Traditional Rulers Council, is a proud custodian of Anioma royal heritage and traditions. His patronage underscores the deep partnership between OFAAC and the traditional institutions that safeguard the cultural identity of the Anioma people.",
     image: imgKikachukwu,
   },
 ];
@@ -137,20 +137,14 @@ const directors = [
     image: imgMonnOlodu,
   },
   {
-    name: "Late Hon Emeka Nmadu",
-    role: "Media Director",
-    bio: "His pivotal role in publicizing OFAAC's activities significantly amplified our voice and brought Anioma culture to a wider audience.",
-    image: imgEmekaNmadu,
-  },
-  {
     name: "Ogbuenyi Afam Ugah",
-    role: "Member",
-    bio: "A committed director whose hands-on approach and dedication significantly contribute to the success of our grassroots cultural initiatives.",
+    role: "Media Director",
+    bio: "His hands-on approach and dedication to publicizing OFAAC's activities have significantly amplified our voice and brought Anioma culture to a wider audience.",
     image: imgAfamUgah,
     objectPosition: "center 20%",
   },
   {
-    name: "Elder Emma Ogwu Emma",
+    name: "Elder Emma Ogwu",
     role: "Finance Director",
     bio: "Meticulously oversees the financial health, resource allocation, and long-term sustainability strategies of the organization.",
     image: imgEmmaOgwu,
@@ -175,7 +169,7 @@ const directors = [
   },
   {
     name: "Prince Andrew Obi",
-    role: "Coordinator",
+    role: "National Coordinator",
     bio: "Expertly facilitates various organizational activities, logistics, and special projects, ensuring flawless execution of our events.",
     image: imgAndrewObi,
   },

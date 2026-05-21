@@ -6,18 +6,19 @@ import { Users } from "lucide-react";
 // ── Data ───────────────────────────────────────────────────────────
 
 const steeringCommittee = [
-  { name: "Arc. Kester Ifeadi",         role: "President" },
-  { name: "Mr. Paddy Ugboh",             role: "Vice President" },
-  { name: "Prof. Mokwunyei Josephine",  role: "Chairperson" },
-  { name: "Prof. Eric Eboh",            role: "Member" },
-  { name: "Prof. Oboko Uche",           role: "Member" },
-  { name: "Mr. Ogwu Emmanuel",          role: "Member" },
-  { name: "Chief Ndili",                role: "Member" },
-  { name: "Chief Alfred",               role: "Member" },
-  { name: "Dr. Emeka Esogbue",          role: "Secretary" },
-  { name: "Barr. Monn Olodu",          role: "Member" },
-  {name: "Prince Walter Eziashi", role:"Member"},
-  { name: "Prince Andrew Obi",          role: "National Coordinator" },
+  { name: "Arc. Kester Ifeadi",          role: "President" },
+  { name: "Mr. Paddy Ugboh",              role: "Vice President" },
+  { name: "Prof. Mokwunyei Josephine",   role: "Chairperson" },
+  { name: "Prof. Eric Eboh",             role: "Member" },
+  { name: "Prof. Oboko Uche",            role: "Member" },
+  { name: "Mr. Ogwu Emmanuel",           role: "Member" },
+  { name: "Chief Augustine Ndili",       role: "Member" },
+  { name: "Chief Alfred Agboruja",       role: "Member" },
+  { name: "Dr. Emeka Esogbue",           role: "Secretary" },
+  { name: "Awunor Ifeanyi",              role: "Assistant Secretary" },
+  { name: "Barr. Monn Olodu",           role: "Member" },
+  { name: "Prince Walter Eziashi",       role: "Member" },
+  { name: "Prince Andrew Obi",           role: "National Coordinator" },
 ];
 
 const zones = [
@@ -47,7 +48,8 @@ const zones = [
     name: "Aniocha North",
     members: [
       { name: "Emmanuel Ogwu",        role: "Team Leader" },
-      { name: "Austen Anizor",        role: "Resource Officer" },
+      { name: "Austen Anizor",        role: "Resource Officer 1" },
+      { name: "Awunor Ifeanyi",       role: "Resource Officer 2" },
       { name: "Kelvin Akazue",        role: "Protocol & Logistics Officer" },
       { name: "Igbenebor Oge Festus", role: "Technical Officer" },
     ],
@@ -56,20 +58,21 @@ const zones = [
     number: 4,
     name: "Ika",
     members: [
-      { name: "Prof. Eric Eboh",                  role: "Team Leader" },
-      { name: "Chief Jonathan Agbejiagwe Ohioya",  role: "Resource Person" },
-      { name: "Prince Kester Nkemachor",           role: "Logistics Person" },
-      // { name: "Mr. Amos Chukwuekwu",              role: "Technical Officer" },
+      { name: "Prof. Eric Eboh",                   role: "Team Leader" },
+      { name: "Chief Jonathan Agbejiagwe Ohioya",   role: "Resource Person" },
+      { name: "Prince Kester Nkemachor",            role: "Logistics Person" },
+      { name: "Mr. Amos Chukwuekwu",               role: "Technical Officer" },
     ],
   },
   {
     number: 5,
     name: "Ukwuani",
     members: [
-      { name: "Dr. Emeka Esogbue",              role: "Team Leader" },
-      { name: "Rev. Felix Ifeanyi Nwabuokei",   role: "Resource Person" },
-      { name: "Engr. Wisdom Ikpeteshi Ndubishi",role: "Liaison Person" },
-      { name: "Mr. Emeka Onah",                 role: "Logistics Person" },
+      { name: "Dr. Emeka Esogbue",               role: "Team Leader" },
+      { name: "Rev. Felix Ifeanyi Nwabuokei",    role: "Resource Person" },
+      { name: "Engr. Wisdom Ikpeteshi Ndubishi", role: "Liaison Person" },
+      { name: "Mr. Emeka Onah",                  role: "Logistics Person" },
+      { name: "Mr. Amos Chukwuekwu",             role: "Technical Officer" },
     ],
   },
   {
