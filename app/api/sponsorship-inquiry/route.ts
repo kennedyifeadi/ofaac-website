@@ -80,7 +80,7 @@ export async function POST(request: Request) {
         // Send notification to OFAAC admin
         const adminEmailResult = await resend.emails.send({
           from: 'OFAAC Website <onboarding@resend.dev>', // Use verified domain here when ready
-          to: ['ofaacofficial@gmail.com'], // OFAAC admin inbox
+          to: ['info@ofaac.org'], // OFAAC admin inbox
           subject: `New Lead: ${tier} Sponsorship from ${companyName}`,
           html: `
             <div style="font-family: sans-serif; color: #333; max-width: 600px; line-height: 1.6;">

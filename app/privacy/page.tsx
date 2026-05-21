@@ -74,7 +74,7 @@ export default function PrivacyPolicyPage() {
             287 Nnebisi Road, by Slot, opposite Sterling Bank<br />
             Asaba, Delta State, Nigeria<br />
             Phone: +234 803 307 0480<br />
-            Email: ofaacofficial@gmail.com
+            Email: info@ofaac.org
           </p>
         </div>
       </section>

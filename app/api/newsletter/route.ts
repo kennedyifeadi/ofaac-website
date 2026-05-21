@@ -3,7 +3,7 @@ import dbConnect from '@/lib/dbConnect';
 import NewsletterSubscriber from '@/models/NewsletterSubscriber';
 import { Resend } from 'resend';
 
-const OFAAC_EMAIL = 'ofaacofficial@gmail.com';
+const OFAAC_EMAIL = 'info@ofaac.org';
 
 export async function POST(request: Request) {
   try {
